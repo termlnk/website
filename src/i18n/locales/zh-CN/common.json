@@ -1,0 +1,153 @@
+{
+  "language": {
+    "label": "语言",
+    "en": "English",
+    "zh-CN": "简体中文",
+    "zh-TW": "繁體中文",
+    "ja": "日本語",
+    "ko": "한국어"
+  },
+  "nav": {
+    "changelog": "更新日志",
+    "github": "GitHub"
+  },
+  "hero": {
+    "titleLine1": "Termlnk",
+    "titleLine2": "为开发者打造的",
+    "subtitleLine1": "现代、可扩展的开发者智能终端。",
+    "subtitleLine2": "SSH、SFTP、AI Agent、主题与插件，汇聚在同一个工作区。",
+    "download": "下载",
+    "cycle": {
+      "developers": "智能终端",
+      "ssh": "SSH",
+      "sftp": "SFTP",
+      "aiAgents": "AI Agent",
+      "plugins": "插件生态",
+      "workflows": "工作流"
+    }
+  },
+  "downloadMenu": {
+    "macArm64": "macOS Apple Silicon",
+    "macAmd64": "macOS Intel",
+    "windows": "Windows",
+    "linux": "Linux",
+    "loadingLatest": "加载中",
+    "unavailable": "未发布",
+    "githubReleases": "发布页"
+  },
+  "demo": {
+    "terminal": {
+      "title": "分屏掌控一切",
+      "description": "自由拖拽、分割、缩放并聚焦终端布局。"
+    },
+    "sshSftp": {
+      "title": "连接每一台机器",
+      "description": "用树状 SSH 主机管理与双栏 SFTP，再加上右侧 AI 聊天，一屏完成。"
+    },
+    "aiAgent": {
+      "title": "原生 AI 工作区",
+      "description": "Claude、GPT、Gemini、DeepSeek 全都能直接在终端旁协作。"
+    },
+    "settings": {
+      "title": "每个细节都可定制",
+      "description": "主题、快捷键、Provider、声音、语言，在一个设置面板内统一调整。"
+    }
+  },
+  "features": {
+    "zeroConfig": {
+      "title": "AI 工具自动接入",
+      "description": "启动后写入 Termlnk hook，让 Claude Code、Codex、Cursor、Gemini、OpenCode 等工具把状态同步回工作区。"
+    },
+    "everyAgent": {
+      "title": "Agent 状态面板",
+      "description": "会话进度、待办、提问和审批集中展示。Termlnk 内外启动的 Agent，都能在同一面板里追踪。"
+    },
+    "terminals": {
+      "title": "智能终端工作区",
+      "description": "本地 PTY、远程 SSH、SFTP 文件和 AI 对话并排协作，支持分屏、缩放、聚焦与会话恢复。"
+    },
+    "soundAlerts": {
+      "title": "审批与声音提醒",
+      "description": "Agent 请求命令执行、工具访问或用户回答时，直接在面板中处理，并用可配置声音提醒关键事件。"
+    },
+    "planReview": {
+      "title": "计划与命令审查",
+      "description": "执行前先查看 Markdown 计划，`terminal_run` 等关键操作需要确认，让 AI 更适合进入真实仓库。"
+    },
+    "native": {
+      "title": "主题与插件系统",
+      "description": "内置 71 款 Base46 主题、实时主题编辑器和类 VS Code 插件贡献点，把终端扩展成你的开发环境。"
+    },
+    "mcpTools": {
+      "title": "MCP 工具调用",
+      "description": "连接本地或远程 MCP Server，查看可用工具，并让 Agent 在对话中安全调用。"
+    },
+    "sessionRestore": {
+      "title": "会话恢复",
+      "description": "终端会话与工作区状态持久化保存，重启后快速回到之前的开发现场。"
+    },
+    "sshTunnels": {
+      "title": "进阶 SSH 能力",
+      "description": "内置 ProxyJump 链、SOCKS5 代理、X11 转发，以及 trzsz / zmodem 文件传输。"
+    }
+  },
+  "faq": {
+    "title": "常见问题",
+    "items": {
+      "platforms": {
+        "question": "Termlnk 和普通终端有什么不同？",
+        "answer": "Termlnk 把本地终端、SSH、SFTP、AI Agent、MCP、主题和插件放进同一个原生工作区。你可以一边操作远程机器，一边让 AI 读取上下文、提交计划并等待审批。"
+      },
+      "agents": {
+        "question": "支持哪些 AI 编码工具？",
+        "answer": "当前 hook 接入覆盖 Claude Code、Codex、Cursor、Gemini、Copilot、CodeBuddy、OpenCode、Kimi Code。它们的会话状态、待办、提问与审批会汇总到统一面板。"
+      },
+      "approval": {
+        "question": "能管理 SSH 和 SFTP 吗？",
+        "answer": "可以。Termlnk 提供树形 SSH 主机管理，支持密码、私钥、SSH Agent、跳板和代理；SFTP 是双栏文件浏览器，支持拖拽传输、批量操作和权限编辑。"
+      },
+      "data": {
+        "question": "Agent 执行命令前会经过我确认吗？",
+        "answer": "会。AI 辅助的 `terminal_run` 等关键操作需要用户审批。Termlnk 会把计划、权限请求和可选回答展示出来，你可以在面板里允许、拒绝或继续审查。"
+      },
+      "setup": {
+        "question": "AI 工具自动接入是怎么做到的？",
+        "answer": "应用启动后会安装一个本地 hook helper，并把对应条目写入已支持工具的配置文件。Agent 触发事件时，helper 通过 127.0.0.1 回传到 Termlnk，不依赖外部中转服务。"
+      },
+      "resources": {
+        "question": "支持哪些平台和架构？",
+        "answer": "Termlnk 面向 macOS、Windows 与 Linux 设计，支持 Apple Silicon、Intel、AMD64 与 ARM64 架构。可用安装包以 GitHub Releases 中实际发布的构建为准。"
+      },
+      "opensource": {
+        "question": "Termlnk 是开源的吗？",
+        "answer": "是。Termlnk 源码公开，当前采用 PolyForm Noncommercial License 1.0.0；商业使用不在该许可证授权范围内，商标使用也需遵循项目的商标说明。"
+      }
+    }
+  },
+  "changelog": {
+    "assetCount": "安装包",
+    "description": "更新日志直接来自 GitHub Releases，版本日期、下载文件与发布重点会和开源仓库保持一致。",
+    "downloads": "下载文件",
+    "emptyDescription": "GitHub 上发布新版本后会自动出现在这里。",
+    "emptyTitle": "还没有发布版本",
+    "errorDescription": "当前无法加载 GitHub Releases，你仍然可以打开仓库发布页查看。",
+    "errorTitle": "无法加载更新日志",
+    "eyebrow": "Release Notes",
+    "latestVersion": "最新版本",
+    "loading": "正在从 GitHub 加载更新日志",
+    "moreAssets": "GitHub 上还有 {{count}} 个文件",
+    "prerelease": "预发布",
+    "releaseCount": "发布数量",
+    "releaseNotes": "发布说明",
+    "title": "更新日志",
+    "versions": "版本列表",
+    "viewAll": "在 GitHub 查看"
+  },
+  "footer": {
+    "changelog": "更新日志",
+    "contact": "联系",
+    "privacy": "隐私",
+    "terms": "条款",
+    "copyright": "© {{year}} Termlnk"
+  }
+}

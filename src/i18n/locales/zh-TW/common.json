@@ -1,0 +1,153 @@
+{
+  "language": {
+    "label": "語言",
+    "en": "English",
+    "zh-CN": "简体中文",
+    "zh-TW": "繁體中文",
+    "ja": "日本語",
+    "ko": "한국어"
+  },
+  "nav": {
+    "changelog": "更新日誌",
+    "github": "GitHub"
+  },
+  "hero": {
+    "titleLine1": "Termlnk",
+    "titleLine2": "為開發者打造的",
+    "subtitleLine1": "現代、可擴充的開發者智慧終端。",
+    "subtitleLine2": "SSH、SFTP、AI Agent、主題與外掛，匯聚在同一個工作區。",
+    "download": "下載",
+    "cycle": {
+      "developers": "智慧終端",
+      "ssh": "SSH",
+      "sftp": "SFTP",
+      "aiAgents": "AI Agent",
+      "plugins": "外掛生態",
+      "workflows": "工作流"
+    }
+  },
+  "downloadMenu": {
+    "macArm64": "macOS Apple Silicon",
+    "macAmd64": "macOS Intel",
+    "windows": "Windows",
+    "linux": "Linux",
+    "loadingLatest": "載入中",
+    "unavailable": "未發布",
+    "githubReleases": "發布頁"
+  },
+  "demo": {
+    "terminal": {
+      "title": "分割掌控一切",
+      "description": "自由拖曳、分割、縮放並聚焦終端布局。"
+    },
+    "sshSftp": {
+      "title": "連上每一台機器",
+      "description": "用樹狀 SSH 主機管理、雙欄 SFTP，再加上右側 AI 對話，一個畫面全部完成。"
+    },
+    "aiAgent": {
+      "title": "原生 AI 工作區",
+      "description": "Claude、GPT、Gemini、DeepSeek 都能直接在終端旁協作。"
+    },
+    "settings": {
+      "title": "每個細節都能自訂",
+      "description": "主題、快捷鍵、Provider、聲音、語言，都可在同一個設定面板調整。"
+    }
+  },
+  "features": {
+    "zeroConfig": {
+      "title": "零配置接入",
+      "description": "啟動一次即可。自動為 Claude Code、Codex、Gemini CLI、Cursor、OpenCode 等工具寫入所需 hook。"
+    },
+    "everyAgent": {
+      "title": "兼容所有 Agent",
+      "description": "Claude Code、Codex、Gemini CLI、Cursor、OpenCode、Droid —— 所有代理統一匯聚到一個面板。"
+    },
+    "terminals": {
+      "title": "跨平台原生",
+      "description": "macOS、Windows、Linux 全面支援。本地終端、遠端 SSH 與 AI 工作流整合在同一個原生工作區中。"
+    },
+    "soundAlerts": {
+      "title": "聲音提醒",
+      "description": "8-bit 合成提示音會在代理需要你關注時提醒你，即使暫時離開螢幕也不會錯過。"
+    },
+    "planReview": {
+      "title": "Plan 審閱",
+      "description": "在代理真正執行之前，以完整 Markdown 形式先審閱它的計畫。"
+    },
+    "native": {
+      "title": "為開發者而生",
+      "description": "SSH、SFTP、AI 對話、主題與多分屏，全都圍繞真實編碼工作流設計。"
+    },
+    "mcpTools": {
+      "title": "MCP 工具調用",
+      "description": "連接本地或遠端 MCP Server，查看可用工具，並讓 Agent 在對話中安全調用。"
+    },
+    "sessionRestore": {
+      "title": "會話恢復",
+      "description": "終端會話與工作區狀態持久化保存，重啟後快速回到之前的開發現場。"
+    },
+    "sshTunnels": {
+      "title": "進階 SSH 能力",
+      "description": "內建 ProxyJump 鏈、SOCKS5 代理、X11 轉發，以及 trzsz / zmodem 檔案傳輸。"
+    }
+  },
+  "faq": {
+    "title": "常見問題",
+    "items": {
+      "platforms": {
+        "question": "支援哪些平台？",
+        "answer": "Termlnk 面向 macOS、Windows 與 Linux 設計。官網下載選單會跳轉至 GitHub Releases，之後釋出的新版本都會在那裡提供。"
+      },
+      "agents": {
+        "question": "支援哪些 AI 編碼工具？",
+        "answer": "支援 Claude Code、Codex、Gemini CLI、Cursor、OpenCode、Droid 等。所有會話都會彙整到統一的劉海式面板中。"
+      },
+      "approval": {
+        "question": "我能不切換視窗就完成權限審批嗎？",
+        "answer": "可以。當代理請求權限時，面板會展開為 Allow / Deny 操作，你可以在不失去上下文的情況下快速回應。"
+      },
+      "data": {
+        "question": "我的資料會離開本機嗎？",
+        "answer": "產品圍繞 local-first 工作流打造。會話內容、終端狀態與審批操作都盡量留在你的機器與自己的工具鏈中。"
+      },
+      "setup": {
+        "question": "零配置接入是怎麼做到的？",
+        "answer": "首次啟動時，應用會把所需 hook 寫入各個受支援工具的設定檔，並透過輕量橋接層與當前編碼工具通信。"
+      },
+      "resources": {
+        "question": "會不會很佔資源？",
+        "answer": "不會。應用在閒置時會盡量保持輕量，只在需要時把關鍵資訊浮現出來，而不是持續打斷你的專注。"
+      },
+      "opensource": {
+        "question": "Termlnk 是開源的嗎？",
+        "answer": "是的。專案正在轉向開源，官網也已移除價格區塊，並把下載入口改為 GitHub Releases。"
+      }
+    }
+  },
+  "changelog": {
+    "assetCount": "安裝包",
+    "description": "更新日誌直接來自 GitHub Releases，版本日期、下載檔案與發布重點會和開源倉庫保持一致。",
+    "downloads": "下載檔案",
+    "emptyDescription": "GitHub 上發布新版本後會自動出現在這裡。",
+    "emptyTitle": "尚未發布版本",
+    "errorDescription": "目前無法載入 GitHub Releases，你仍可開啟倉庫發布頁查看。",
+    "errorTitle": "無法載入更新日誌",
+    "eyebrow": "Release Notes",
+    "latestVersion": "最新版本",
+    "loading": "正在從 GitHub 載入更新日誌",
+    "moreAssets": "GitHub 上還有 {{count}} 個檔案",
+    "prerelease": "預發布",
+    "releaseCount": "發布數量",
+    "releaseNotes": "發布說明",
+    "title": "更新日誌",
+    "versions": "版本列表",
+    "viewAll": "在 GitHub 查看"
+  },
+  "footer": {
+    "changelog": "更新日誌",
+    "contact": "聯絡",
+    "privacy": "隱私",
+    "terms": "條款",
+    "copyright": "© {{year}} Termlnk"
+  }
+}

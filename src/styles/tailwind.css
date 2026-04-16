@@ -1,0 +1,43 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@theme {
+  --color-*: initial;
+}
+
+@theme inline {
+  /* Core palette */
+  --color-bg: #151518;
+  --color-surface: #1a1a1a;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-text: #e5e5e5;
+  --color-muted: #888888;
+  --color-accent: #d97757;
+
+  /* Status colors */
+  --color-idle: #22c55e;
+  --color-idle-bright: #4ade80;
+  --color-work: #3b82f6;
+  --color-work-bright: #60a5fa;
+  --color-alert: #f97316;
+  --color-alert-bright: #fb923c;
+  --color-question: #06b6d4;
+  --color-question-bright: #22d3ee;
+  --color-explore: #a855f7;
+  --color-ended: #737373;
+
+  /* Semantic */
+  --color-glass-bg: rgba(255, 255, 255, 0.03);
+  --color-glass-border: rgba(255, 255, 255, 0.08);
+  --color-glass-highlight: rgba(255, 255, 255, 0.15);
+
+  /* Fonts */
+  --font-sans: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', ui-monospace, monospace;
+  --font-serif: 'Instrument Serif', Georgia, serif;
+
+  /* Easing */
+  --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.1);
+}
+
+@custom-variant dark (&:where(.dark, .dark *));

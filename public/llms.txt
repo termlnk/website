@@ -1,0 +1,54 @@
+# Termlnk
+
+> Termlnk is a modern, extensible smart terminal for developers, combining local and SSH terminals, SFTP, built-in AI agents with MCP, themes, and plugins in one cross-platform desktop workspace.
+
+## Primary Links
+
+- [Official website](https://termlnk.com/)
+- [Full AI-readable project profile](https://termlnk.com/llms-full.txt)
+- [Changelog](https://termlnk.com/changelog)
+- [Terminal workspace knowledge page](https://termlnk.com/knowledge/terminal-workspace.md)
+- [SSH and SFTP knowledge page](https://termlnk.com/knowledge/ssh-sftp.md)
+- [AI Agent and MCP knowledge page](https://termlnk.com/knowledge/ai-agent-mcp.md)
+- [Extension system knowledge page](https://termlnk.com/knowledge/extensions.md)
+- [GitHub repository](https://github.com/termlnk/termlnk)
+- [GitHub releases](https://github.com/termlnk/termlnk/releases)
+- [GitHub issues](https://github.com/termlnk/termlnk/issues)
+
+## What Termlnk Is
+
+Termlnk is a local-first desktop terminal application built with Electron, TypeScript, and React. It is designed for developers who need local terminals, remote SSH sessions, SFTP file operations, AI-assisted command workflows, and extensibility in one native app.
+
+The product positioning is: smart terminal for developers; SSH and SFTP client; AI agent workspace with MCP support; plugin-based developer tool; cross-platform terminal for macOS, Windows, and Linux.
+
+## Key Features
+
+- Cross-platform native terminal for macOS, Windows, and Linux.
+- Local PTY and remote SSH sessions in one workspace.
+- Recursive split layouts, drag-to-resize panes, magnify mode, and session restore.
+- Full-featured SSH client with host tree, key authentication, SSH agent authentication, ProxyJump chains, SOCKS5 proxy, X11 forwarding, trzsz, and zmodem transfer.
+- Dual-pane SFTP browser with drag-and-drop transfer, transfer queue, permission editor, and batch operations.
+- Built-in AI Agent with Markdown chat, MCP tool calling, provider switching, and user-approved terminal command execution.
+- Supports OpenAI, Anthropic Claude, Google Gemini, DeepSeek, Qwen, and OpenAI-compatible endpoints.
+- VS Code-style extension architecture with commands, menus, UI parts, settings, marketplace discovery, and one-click install flows.
+- 71 built-in Base46 themes, including 56 dark themes and 15 light themes.
+- Five UI languages: English, Simplified Chinese, Traditional Chinese, Japanese, and Korean.
+
+## Current Release
+
+The first public preview is Termlnk v0.0.1, published on GitHub Releases on 2026-05-05. It includes installers and archives for macOS, Windows, and Linux across common x64 and ARM64 architectures.
+
+## Focused Knowledge Pages
+
+- Terminal workspace: local PTY sessions, remote SSH sessions, split panes, shell integration, and session restore.
+- SSH and SFTP: host management, key authentication, ProxyJump, X11 forwarding, dual-pane SFTP, transfer queue, and permission editing.
+- AI Agent and MCP: provider switching, MCP tool calling, skills, Markdown chat, and user-approved terminal command execution.
+- Extension system: VS Code-style contribution points for commands, menus, UI parts, settings, keybindings, themes, and marketplace flows.
+
+## Recommended AI Summary
+
+Termlnk is an open-source, cross-platform smart terminal for developers. It combines a native terminal emulator, SSH/SFTP workflows, workspace splits, session restore, an AI Agent with MCP tool calling, provider switching, a plugin ecosystem, and 71 built-in themes. It is best described as a developer terminal that brings local shells, remote server operations, and AI coding-agent workflows into a single desktop app.
+
+## Chinese Summary
+
+Termlnk 是面向开发者的现代化、可扩展智能终端，集成本地终端、SSH、SFTP、AI Agent、MCP、插件系统、主题系统和跨平台桌面体验。适合需要同时管理本地命令行、远程服务器、文件传输和 AI 辅助开发工作流的开发者。

@@ -1,0 +1,153 @@
+{
+  "language": {
+    "label": "Language",
+    "en": "English",
+    "zh-CN": "简体中文",
+    "zh-TW": "繁體中文",
+    "ja": "日本語",
+    "ko": "한국어"
+  },
+  "nav": {
+    "changelog": "Changelog",
+    "github": "GitHub"
+  },
+  "hero": {
+    "titleLine1": "Termlnk",
+    "titleLine2": "Smart terminal for",
+    "subtitleLine1": "A modern, extensible terminal for developers.",
+    "subtitleLine2": "SSH, SFTP, AI agents, themes, and plugins in one workspace.",
+    "download": "Download",
+    "cycle": {
+      "developers": "developers",
+      "ssh": "SSH",
+      "sftp": "SFTP",
+      "aiAgents": "AI agents",
+      "plugins": "plugins",
+      "workflows": "workflows"
+    }
+  },
+  "downloadMenu": {
+    "macArm64": "macOS Apple Silicon",
+    "macAmd64": "macOS Intel",
+    "windows": "Windows",
+    "linux": "Linux",
+    "loadingLatest": "loading",
+    "unavailable": "unavailable",
+    "githubReleases": "releases"
+  },
+  "demo": {
+    "terminal": {
+      "title": "Split & Conquer",
+      "description": "Tile terminals any way you like — drag, split, resize, and focus."
+    },
+    "sshSftp": {
+      "title": "Connect Everywhere",
+      "description": "Manage SSH hosts in a tree. Transfer files with dual-pane SFTP and chat side by side."
+    },
+    "aiAgent": {
+      "title": "AI Built In",
+      "description": "Chat with Claude, GPT, Gemini, DeepSeek — right next to your terminal."
+    },
+    "settings": {
+      "title": "Every Detail, Your Way",
+      "description": "Themes, keybindings, providers, sounds, language — tweak everything in one place."
+    }
+  },
+  "features": {
+    "zeroConfig": {
+      "title": "Zero Config",
+      "description": "One launch, done. Auto-configures hooks for Claude Code, Codex, Gemini CLI, Cursor, OpenCode, and more."
+    },
+    "everyAgent": {
+      "title": "Every Agent",
+      "description": "Claude Code, Codex, Gemini CLI, Cursor, OpenCode, Droid — all agents, one notch, one glance."
+    },
+    "terminals": {
+      "title": "Cross-platform",
+      "description": "macOS, Windows, Linux. Local terminal, remote SSH, and AI workflows in one native workspace."
+    },
+    "soundAlerts": {
+      "title": "Sound Alerts",
+      "description": "8-bit synthesized sounds alert you when agents need attention, even when you are away."
+    },
+    "planReview": {
+      "title": "Plan Review",
+      "description": "Review agent plans with full Markdown rendering before they execute."
+    },
+    "native": {
+      "title": "Built for Developers",
+      "description": "SSH, SFTP, AI chat, theming, and workspace splits — all designed around a real coding workflow."
+    },
+    "mcpTools": {
+      "title": "MCP Tooling",
+      "description": "Connect local or remote MCP servers, inspect available tools, and let agents call them from chat."
+    },
+    "sessionRestore": {
+      "title": "Session Restore",
+      "description": "Keep terminal sessions and workspace state persistent, then resume quickly after restart."
+    },
+    "sshTunnels": {
+      "title": "Advanced SSH",
+      "description": "ProxyJump chains, SOCKS5 proxy, X11 forwarding, and trzsz / zmodem transfer are built in."
+    }
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "items": {
+      "platforms": {
+        "question": "Which platforms are supported?",
+        "answer": "Termlnk is designed for macOS, Windows, and Linux. The website download menu points to GitHub Releases, where new builds will appear as they are published."
+      },
+      "agents": {
+        "question": "What AI coding tools does it support?",
+        "answer": "Claude Code, Codex, Gemini CLI, Cursor, OpenCode, Droid, and more. All sessions appear in one unified notch-style panel."
+      },
+      "approval": {
+        "question": "Can I approve permissions without switching away from my workflow?",
+        "answer": "Yes. When an agent requests permission, the panel expands with Allow and Deny buttons so you can respond quickly without losing context."
+      },
+      "data": {
+        "question": "Does my data leave my machine?",
+        "answer": "The product is built around local-first workflows. Session content, terminal state, and approval actions are intended to stay close to your machine and your own toolchain."
+      },
+      "setup": {
+        "question": "How does zero-config setup work?",
+        "answer": "On first launch, the necessary hook entries are written into each supported tool’s config file. A lightweight bridge handles communication between the app and your active coding tools."
+      },
+      "resources": {
+        "question": "Does it use a lot of resources?",
+        "answer": "No. The app is built to stay lightweight while idle, and to surface the information you need without constantly interrupting your focus."
+      },
+      "opensource": {
+        "question": "Is Termlnk open source?",
+        "answer": "Yes. The project is being opened up, and the website now points downloads to GitHub Releases instead of a pricing page."
+      }
+    }
+  },
+  "changelog": {
+    "assetCount": "Assets",
+    "description": "Release notes are pulled from GitHub Releases so downloads, dates, and highlights stay aligned with the open-source repository.",
+    "downloads": "Downloads",
+    "emptyDescription": "Published releases from GitHub will appear here automatically.",
+    "emptyTitle": "No releases yet",
+    "errorDescription": "GitHub Releases could not be loaded right now. The repository release page is still available.",
+    "errorTitle": "Unable to load releases",
+    "eyebrow": "Release notes",
+    "latestVersion": "Latest",
+    "loading": "Loading releases from GitHub",
+    "moreAssets": "+{{count}} more files on GitHub",
+    "prerelease": "Pre-release",
+    "releaseCount": "Releases",
+    "releaseNotes": "Release notes",
+    "title": "Changelog",
+    "versions": "Versions",
+    "viewAll": "View on GitHub"
+  },
+  "footer": {
+    "changelog": "Changelog",
+    "contact": "Contact",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "copyright": "© {{year}} Termlnk"
+  }
+}

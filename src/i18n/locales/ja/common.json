@@ -1,0 +1,153 @@
+{
+  "language": {
+    "label": "言語",
+    "en": "English",
+    "zh-CN": "简体中文",
+    "zh-TW": "繁體中文",
+    "ja": "日本語",
+    "ko": "한국어"
+  },
+  "nav": {
+    "changelog": "更新履歴",
+    "github": "GitHub"
+  },
+  "hero": {
+    "titleLine1": "Termlnk",
+    "titleLine2": "開発者のための",
+    "subtitleLine1": "モダンで拡張性の高い開発者向けスマートターミナル。",
+    "subtitleLine2": "SSH、SFTP、AI Agent、テーマ、プラグインを 1 つのワークスペースに。",
+    "download": "ダウンロード",
+    "cycle": {
+      "developers": "スマートターミナル",
+      "ssh": "SSH",
+      "sftp": "SFTP",
+      "aiAgents": "AI Agent",
+      "plugins": "プラグイン",
+      "workflows": "ワークフロー"
+    }
+  },
+  "downloadMenu": {
+    "macArm64": "macOS Apple Silicon",
+    "macAmd64": "macOS Intel",
+    "windows": "Windows",
+    "linux": "Linux",
+    "loadingLatest": "読み込み中",
+    "unavailable": "未公開",
+    "githubReleases": "リリース"
+  },
+  "demo": {
+    "terminal": {
+      "title": "分割して制御",
+      "description": "ターミナルを自由にドラッグ、分割、リサイズし、必要なペインにすぐ集中できます。"
+    },
+    "sshSftp": {
+      "title": "どこへでも接続",
+      "description": "ツリー型 SSH ホスト管理、デュアルペイン SFTP、右側 AI チャットを 1 画面で。"
+    },
+    "aiAgent": {
+      "title": "AI を標準搭載",
+      "description": "Claude、GPT、Gemini、DeepSeek と、ターミナルの隣でそのまま連携できます。"
+    },
+    "settings": {
+      "title": "細部まであなた仕様に",
+      "description": "テーマ、キーバインド、Provider、サウンド、言語を 1 つの設定画面で調整できます。"
+    }
+  },
+  "features": {
+    "zeroConfig": {
+      "title": "ゼロ設定",
+      "description": "一度起動するだけ。Claude Code、Codex、Gemini CLI、Cursor、OpenCode などに必要な hook を自動設定します。"
+    },
+    "everyAgent": {
+      "title": "あらゆる Agent に対応",
+      "description": "Claude Code、Codex、Gemini CLI、Cursor、OpenCode、Droid まで、すべての Agent を 1 つのパネルで俯瞰できます。"
+    },
+    "terminals": {
+      "title": "クロスプラットフォーム",
+      "description": "macOS、Windows、Linux に対応。ローカル端末、SSH、AI ワークフローを 1 つのネイティブ環境に統合します。"
+    },
+    "soundAlerts": {
+      "title": "サウンド通知",
+      "description": "8-bit 風のサウンドで、Agent が注意を必要とした瞬間をすぐに知らせます。"
+    },
+    "planReview": {
+      "title": "Plan レビュー",
+      "description": "Agent が実行する前に、Markdown で整形されたプランを先に確認できます。"
+    },
+    "native": {
+      "title": "開発者のために設計",
+      "description": "SSH、SFTP、AI チャット、テーマ、分割ワークスペースを、実際の開発フローに合わせて設計しています。"
+    },
+    "mcpTools": {
+      "title": "MCP ツール連携",
+      "description": "ローカル / リモートの MCP サーバーに接続し、利用可能なツールを確認してチャットから呼び出せます。"
+    },
+    "sessionRestore": {
+      "title": "セッション復元",
+      "description": "端末セッションとワークスペース状態を保持し、再起動後もすばやく作業に戻れます。"
+    },
+    "sshTunnels": {
+      "title": "高度な SSH",
+      "description": "ProxyJump チェーン、SOCKS5 プロキシ、X11 転送、trzsz / zmodem 転送を内蔵しています。"
+    }
+  },
+  "faq": {
+    "title": "よくある質問",
+    "items": {
+      "platforms": {
+        "question": "どのプラットフォームに対応していますか？",
+        "answer": "Termlnk は macOS、Windows、Linux 向けに設計されています。Web サイトのダウンロードメニューは GitHub Releases にリンクし、今後のビルドはそこに公開されます。"
+      },
+      "agents": {
+        "question": "どの AI コーディングツールに対応していますか？",
+        "answer": "Claude Code、Codex、Gemini CLI、Cursor、OpenCode、Droid などに対応しています。すべてのセッションが 1 つのノッチ風パネルに集約されます。"
+      },
+      "approval": {
+        "question": "作業の流れを止めずに権限承認できますか？",
+        "answer": "はい。Agent が権限を求めると、パネルが Allow / Deny 操作に展開されるため、文脈を失わずに素早く対応できます。"
+      },
+      "data": {
+        "question": "データはマシンの外に送られますか？",
+        "answer": "この製品は local-first なワークフローを前提に設計されています。セッション内容、端末状態、承認操作は、できる限りあなたのマシンとツールチェーンの近くに留まるようにしています。"
+      },
+      "setup": {
+        "question": "ゼロ設定はどのように実現していますか？",
+        "answer": "初回起動時に、対応ツールの設定ファイルへ必要な hook を書き込み、軽量なブリッジ層を通して現在のコーディングツールと連携します。"
+      },
+      "resources": {
+        "question": "リソース消費は大きいですか？",
+        "answer": "いいえ。アイドル時は軽量に保ちつつ、必要なときだけ重要な情報を前面に出すよう設計されています。"
+      },
+      "opensource": {
+        "question": "Termlnk はオープンソースですか？",
+        "answer": "はい。プロジェクトはオープンソース化に向けて進んでおり、Web サイトも価格ページを廃止して GitHub Releases への導線に切り替えています。"
+      }
+    }
+  },
+  "changelog": {
+    "assetCount": "アセット",
+    "description": "更新履歴は GitHub Releases から取得されるため、日付、ダウンロード、ハイライトがリポジトリと同期します。",
+    "downloads": "ダウンロード",
+    "emptyDescription": "GitHub に公開されたリリースがここに自動表示されます。",
+    "emptyTitle": "リリースはまだありません",
+    "errorDescription": "現在 GitHub Releases を読み込めません。リポジトリのリリースページは引き続き利用できます。",
+    "errorTitle": "更新履歴を読み込めません",
+    "eyebrow": "Release Notes",
+    "latestVersion": "最新",
+    "loading": "GitHub からリリースを読み込み中",
+    "moreAssets": "GitHub にさらに {{count}} 個のファイル",
+    "prerelease": "プレリリース",
+    "releaseCount": "リリース",
+    "releaseNotes": "リリースノート",
+    "title": "更新履歴",
+    "versions": "バージョン",
+    "viewAll": "GitHub で見る"
+  },
+  "footer": {
+    "changelog": "更新履歴",
+    "contact": "お問い合わせ",
+    "privacy": "プライバシー",
+    "terms": "利用規約",
+    "copyright": "© {{year}} Termlnk"
+  }
+}

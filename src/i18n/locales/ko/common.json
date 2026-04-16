@@ -1,0 +1,153 @@
+{
+  "language": {
+    "label": "언어",
+    "en": "English",
+    "zh-CN": "简体中文",
+    "zh-TW": "繁體中文",
+    "ja": "日本語",
+    "ko": "한국어"
+  },
+  "nav": {
+    "changelog": "변경 로그",
+    "github": "GitHub"
+  },
+  "hero": {
+    "titleLine1": "Termlnk",
+    "titleLine2": "개발자를 위한",
+    "subtitleLine1": "현대적이고 확장 가능한 개발자용 스마트 터미널.",
+    "subtitleLine2": "SSH, SFTP, AI Agent, 테마, 플러그인을 하나의 작업 공간에 담았습니다.",
+    "download": "다운로드",
+    "cycle": {
+      "developers": "스마트 터미널",
+      "ssh": "SSH",
+      "sftp": "SFTP",
+      "aiAgents": "AI Agent",
+      "plugins": "플러그인",
+      "workflows": "워크플로"
+    }
+  },
+  "downloadMenu": {
+    "macArm64": "macOS Apple Silicon",
+    "macAmd64": "macOS Intel",
+    "windows": "Windows",
+    "linux": "Linux",
+    "loadingLatest": "로딩 중",
+    "unavailable": "미공개",
+    "githubReleases": "릴리스"
+  },
+  "demo": {
+    "terminal": {
+      "title": "분할해서 제어",
+      "description": "터미널을 자유롭게 드래그하고 분할하고 크기를 조절하며 필요한 창에 즉시 집중할 수 있습니다."
+    },
+    "sshSftp": {
+      "title": "어디서나 연결",
+      "description": "트리형 SSH 호스트 관리, 듀얼 패널 SFTP, 오른쪽 AI 채팅을 한 화면에 담았습니다."
+    },
+    "aiAgent": {
+      "title": "내장형 AI 워크스페이스",
+      "description": "Claude, GPT, Gemini, DeepSeek 를 터미널 옆에서 바로 함께 사용할 수 있습니다."
+    },
+    "settings": {
+      "title": "모든 디테일을 내 방식대로",
+      "description": "테마, 키바인딩, Provider, 사운드, 언어를 하나의 설정 화면에서 조정할 수 있습니다."
+    }
+  },
+  "features": {
+    "zeroConfig": {
+      "title": "제로 설정",
+      "description": "한 번만 실행하면 됩니다. Claude Code, Codex, Gemini CLI, Cursor, OpenCode 등에 필요한 hook 을 자동으로 설정합니다."
+    },
+    "everyAgent": {
+      "title": "모든 Agent 지원",
+      "description": "Claude Code, Codex, Gemini CLI, Cursor, OpenCode, Droid 까지 모든 Agent 를 하나의 패널에서 한눈에 볼 수 있습니다."
+    },
+    "terminals": {
+      "title": "크로스플랫폼",
+      "description": "macOS, Windows, Linux 지원. 로컬 터미널, SSH, AI 워크플로우를 하나의 네이티브 작업 공간에 통합합니다."
+    },
+    "soundAlerts": {
+      "title": "사운드 알림",
+      "description": "8-bit 스타일 사운드로 Agent 가 주의를 요구하는 순간을 빠르게 알려줍니다."
+    },
+    "planReview": {
+      "title": "Plan 리뷰",
+      "description": "Agent 가 실행되기 전에 Markdown 으로 정리된 계획을 먼저 검토할 수 있습니다."
+    },
+    "native": {
+      "title": "개발자를 위해 설계",
+      "description": "SSH, SFTP, AI 채팅, 테마, 분할 워크스페이스를 실제 개발 흐름에 맞춰 설계했습니다."
+    },
+    "mcpTools": {
+      "title": "MCP 도구 연동",
+      "description": "로컬 또는 원격 MCP 서버에 연결하고, 사용 가능한 도구를 확인한 뒤 채팅에서 호출할 수 있습니다."
+    },
+    "sessionRestore": {
+      "title": "세션 복원",
+      "description": "터미널 세션과 워크스페이스 상태를 유지해 재시작 후에도 빠르게 작업으로 돌아갈 수 있습니다."
+    },
+    "sshTunnels": {
+      "title": "고급 SSH",
+      "description": "ProxyJump 체인, SOCKS5 프록시, X11 포워딩, trzsz / zmodem 전송을 기본 제공합니다."
+    }
+  },
+  "faq": {
+    "title": "자주 묻는 질문",
+    "items": {
+      "platforms": {
+        "question": "어떤 플랫폼을 지원하나요?",
+        "answer": "Termlnk 는 macOS, Windows, Linux 를 대상으로 설계되었습니다. 웹사이트의 다운로드 메뉴는 GitHub Releases 로 연결되며, 새 빌드는 그곳에 게시됩니다."
+      },
+      "agents": {
+        "question": "어떤 AI 코딩 도구를 지원하나요?",
+        "answer": "Claude Code, Codex, Gemini CLI, Cursor, OpenCode, Droid 등을 지원합니다. 모든 세션이 하나의 노치 스타일 패널에 모입니다."
+      },
+      "approval": {
+        "question": "작업 흐름을 끊지 않고 권한을 승인할 수 있나요?",
+        "answer": "네. Agent 가 권한을 요청하면 패널이 Allow / Deny 동작으로 확장되어, 문맥을 잃지 않고 빠르게 응답할 수 있습니다."
+      },
+      "data": {
+        "question": "내 데이터가 외부로 나가나요?",
+        "answer": "이 제품은 local-first 워크플로우를 중심으로 설계되었습니다. 세션 내용, 터미널 상태, 승인 동작은 가능한 한 사용자의 머신과 도구 체인 가까이에 머물도록 합니다."
+      },
+      "setup": {
+        "question": "제로 설정은 어떻게 동작하나요?",
+        "answer": "처음 실행할 때 지원되는 각 도구의 설정 파일에 필요한 hook 을 기록하고, 가벼운 브리지 계층을 통해 현재 코딩 도구와 통신합니다."
+      },
+      "resources": {
+        "question": "리소스를 많이 사용하나요?",
+        "answer": "아니요. 유휴 상태에서는 가볍게 유지되며, 필요할 때만 중요한 정보를 전면에 보여주도록 설계되었습니다."
+      },
+      "opensource": {
+        "question": "Termlnk 는 오픈소스인가요?",
+        "answer": "네. 프로젝트는 오픈소스로 전환 중이며, 웹사이트도 가격 섹션을 제거하고 GitHub Releases 로 다운로드 경로를 바꾸었습니다."
+      }
+    }
+  },
+  "changelog": {
+    "assetCount": "파일",
+    "description": "변경 로그는 GitHub Releases 에서 가져오므로 날짜, 다운로드 파일, 주요 내용이 오픈소스 저장소와 동기화됩니다.",
+    "downloads": "다운로드",
+    "emptyDescription": "GitHub 에 새 릴리스가 게시되면 여기에 자동으로 표시됩니다.",
+    "emptyTitle": "아직 릴리스가 없습니다",
+    "errorDescription": "현재 GitHub Releases 를 불러올 수 없습니다. 저장소 릴리스 페이지는 계속 사용할 수 있습니다.",
+    "errorTitle": "변경 로그를 불러올 수 없습니다",
+    "eyebrow": "Release Notes",
+    "latestVersion": "최신",
+    "loading": "GitHub 에서 릴리스를 불러오는 중",
+    "moreAssets": "GitHub 에 파일 {{count}}개 더 있음",
+    "prerelease": "프리릴리스",
+    "releaseCount": "릴리스",
+    "releaseNotes": "릴리스 노트",
+    "title": "변경 로그",
+    "versions": "버전",
+    "viewAll": "GitHub 에서 보기"
+  },
+  "footer": {
+    "changelog": "변경 로그",
+    "contact": "문의",
+    "privacy": "개인정보",
+    "terms": "이용약관",
+    "copyright": "© {{year}} Termlnk"
+  }
+}

@@ -1,0 +1,9 @@
+node_modules
+dist
+dist-node
+*.local
+.DS_Store
+.idea
+.tanstack
+route-tree.gen.ts
+tsconfig.tsbuildinfo
