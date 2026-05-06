@@ -5,5 +5,4 @@ dist-node
 .DS_Store
 .idea
 .tanstack
-route-tree.gen.ts
 tsconfig.tsbuildinfo
