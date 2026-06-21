@@ -1,12 +1,19 @@
 import { useEffect, useRef, useState } from 'react';
+import { useLocation } from '@tanstack/react-router';
 import { useTranslation } from 'react-i18next';
 import { GithubIcon } from '@/components/icons/github-icon';
+import { ThemeToggle } from '@/components/theme-toggle';
 import { LanguageSwitcher } from '@/layouts/nav/language-switcher';
+import { cn } from '@/lib/utils';
 
 export function Nav() {
   const { t } = useTranslation();
+  const { pathname } = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const prevRef = useRef(false);
+
+  const isHeroPage = pathname === '/';
+  const useLight = isHeroPage && !scrolled;
 
   useEffect(() => {
     const onScroll = () => {
@@ -21,74 +28,72 @@ export function Nav() {
   }, []);
 
   return (
-    <nav
-      className="fixed top-0 left-0 right-0 pointer-events-none"
-      style={{ zIndex: 180 }}
-    >
+    <nav className="pointer-events-none fixed left-0 right-0 top-0 z-[180]">
       <div
-        className="absolute inset-0 pointer-events-none transition-opacity duration-300"
-        style={{
-          background: 'linear-gradient(rgba(17,17,17,0.85) 0%, transparent 100%)',
-          opacity: scrolled ? 1 : 0,
-        }}
+        className={cn(
+          'pointer-events-none absolute inset-0 transition-all duration-500',
+          !useLight ? 'bg-bg/90 backdrop-blur-xl' : 'bg-transparent',
+        )}
       />
-      <div
-        className="flex justify-between items-center mx-auto pointer-events-none"
-        style={{ maxWidth: 1060, padding: '18px 24px 28px' }}
-      >
-        <a
-          href="/"
-          className="group flex items-center gap-2 no-underline uppercase pointer-events-auto text-muted hover:text-text transition-colors duration-200"
-          style={{
-            fontFamily: '"JetBrains Mono", monospace',
-            fontSize: 12,
-            letterSpacing: '0.08em',
-            WebkitFontSmoothing: 'none',
-          }}
-        >
-          <img
-            src="/images/logo.png"
-            alt="Termlnk"
-            width={20}
-            height={20}
-            className="rounded-[5px] opacity-70 group-hover:opacity-100 transition-opacity duration-200"
-          />
-          TERMLNK
-        </a>
-
-        <div className="flex items-center gap-2 pointer-events-auto">
+      <div className="pointer-events-none relative mx-auto flex max-w-[1200px] items-center justify-between px-6 pb-7 pt-[18px]">
+        <div className="pointer-events-auto flex items-center gap-6">
           <a
-            href="/changelog"
-            className="hidden sm:inline-flex items-center justify-center no-underline transition-colors duration-200 text-muted hover:text-text"
-            style={{
-              height: 32,
-              border: '1px solid rgba(255,255,255,0.15)',
-              borderRadius: 9,
-              background: 'rgba(255,255,255,0.03)',
-              fontFamily: '"JetBrains Mono", monospace',
-              fontSize: 11,
-              padding: '0 12px',
-            }}
+            href="/"
+            className={cn(
+              'group flex items-center gap-2 font-mono text-xs uppercase tracking-[0.08em] no-underline transition-colors duration-200',
+              useLight ? 'text-white/80 hover:text-white' : 'text-text',
+            )}
           >
-            {t('nav.changelog')}
+            <img
+              src="/images/logo.png"
+              alt="Termlnk"
+              width={20}
+              height={20}
+              className="rounded-[5px] opacity-80 transition-opacity duration-200 group-hover:opacity-100"
+            />
+            TERMLNK
           </a>
-          <LanguageSwitcher />
+
+          <div className="hidden items-center gap-5 sm:flex">
+            <NavLink href="/docs" useLight={useLight}>{t('nav.docs')}</NavLink>
+            <NavLink href="/changelog" useLight={useLight}>{t('nav.changelog')}</NavLink>
+          </div>
+        </div>
+
+        <div className="pointer-events-auto flex items-center gap-2.5">
+          <LanguageSwitcher useLight={useLight} />
+          <ThemeToggle useLight={useLight} />
           <a
             href="https://github.com/termlnk/termlnk"
             aria-label={t('nav.github')}
-            className="flex items-center justify-center no-underline transition-all duration-200 text-muted hover:text-text"
-            style={{
-              width: 32,
-              height: 32,
-              border: '1px solid rgba(255,255,255,0.15)',
-              borderRadius: 9,
-              background: 'rgba(255,255,255,0.03)',
-            }}
+            className={cn(
+              'flex h-8 items-center gap-1.5 rounded-[9px] px-3 font-mono text-[11px] no-underline transition-all duration-200',
+              useLight
+                ? 'bg-white/15 text-white/90 backdrop-blur-sm hover:bg-white/25 hover:text-white'
+                : 'bg-fg/90 text-bg hover:bg-fg',
+            )}
           >
-            <GithubIcon size={16} />
+            <GithubIcon size={14} />
+            <span>GitHub</span>
           </a>
         </div>
       </div>
     </nav>
+  );
+}
+
+function NavLink({ href, useLight, children }: { href: string; useLight: boolean; children: React.ReactNode }) {
+  return (
+    <a
+      href={href}
+      className={cn(
+        'rounded-lg px-3 py-1.5 text-[13px] no-underline transition-all duration-200',
+        useLight
+          ? 'text-white/80 hover:bg-white/15 hover:text-white'
+          : 'text-text hover:bg-fg/[0.06]',
+      )}
+    >
+      {children}
+    </a>
   );
 }

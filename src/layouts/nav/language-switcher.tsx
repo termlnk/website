@@ -10,7 +10,7 @@ const LANGUAGES = [
   { code: 'ko', short: '한', key: 'language.ko' },
 ] as const;
 
-export function LanguageSwitcher() {
+export function LanguageSwitcher({ useLight = false }: { useLight?: boolean }) {
   const { i18n, t } = useTranslation();
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
@@ -36,24 +36,27 @@ export function LanguageSwitcher() {
   }, [open]);
 
   return (
-    <div ref={rootRef} className="relative pointer-events-auto">
+    <div ref={rootRef} className="pointer-events-auto relative">
       <button
         type="button"
         aria-label={t('language.label')}
         aria-expanded={open}
         className={cn(
-          'flex h-8 cursor-pointer items-center gap-1.5 rounded-[9px] border px-2.5 font-mono text-xs text-text transition-all duration-200 hover:bg-[rgba(255,255,255,0.06)] hover:text-text',
-          {
-            'border-[rgba(255,255,255,0.15)] bg-[rgba(255,255,255,0.03)]': !open,
-            'border-[rgba(255,255,255,0.24)] bg-[rgba(255,255,255,0.08)] shadow-[0_12px_34px_rgba(0,0,0,0.28),inset_0_1px_rgba(255,255,255,0.08)]': open,
-          }
+          'flex h-8 cursor-pointer items-center gap-1.5 rounded-[9px] border-0 px-2.5 font-mono text-xs transition-all duration-200',
+          open
+            ? 'bg-fg/[0.08] text-text shadow-[0_12px_34px_rgba(0,0,0,0.15)]'
+            : useLight
+              ? 'text-white/80 hover:text-white'
+              : 'text-text',
         )}
         onClick={() => setOpen((value) => !value)}
       >
         <span>{current.short}</span>
         <span
-          className={cn('text-[10px] text-[rgba(255,255,255,0.45)] transition-transform duration-200', {
+          className={cn('text-[10px] transition-transform duration-200', {
             'rotate-180': open,
+            'text-fg/40': open || !useLight,
+            'text-white/50': !open && useLight,
           })}
         >
           ▼
@@ -61,7 +64,10 @@ export function LanguageSwitcher() {
       </button>
 
       <div
-        className="pointer-events-none invisible absolute right-0 top-[38px] w-[140px] origin-top-right translate-y-[-8px] scale-[0.98] overflow-hidden rounded-[14px] border border-[rgba(255,255,255,0.12)] bg-[rgba(22,20,32,0.94)] p-[5px] opacity-0 shadow-[0_22px_70px_rgba(0,0,0,0.55),inset_0_1px_rgba(255,255,255,0.08)] backdrop-blur-[20px] transition-[opacity,transform,visibility] duration-[180ms] ease-spring data-[open=true]:pointer-events-auto data-[open=true]:visible data-[open=true]:translate-y-0 data-[open=true]:scale-100 data-[open=true]:opacity-100 data-[open=true]:duration-[220ms]"
+        className={cn(
+          'pointer-events-none invisible absolute right-0 top-[38px] w-[140px] origin-top-right translate-y-[-8px] scale-[0.98] overflow-hidden rounded-xl border border-border bg-surface/95 p-[5px] opacity-0 shadow-[0_22px_70px_rgba(0,0,0,0.2)] backdrop-blur-xl transition-[opacity,transform,visibility] duration-[180ms] ease-spring',
+          'data-[open=true]:pointer-events-auto data-[open=true]:visible data-[open=true]:translate-y-0 data-[open=true]:scale-100 data-[open=true]:opacity-100 data-[open=true]:duration-[220ms]',
+        )}
         data-open={open}
       >
         {LANGUAGES.map((item, index) => {
@@ -72,11 +78,11 @@ export function LanguageSwitcher() {
               key={item.code}
               type="button"
               className={cn(
-                'flex w-full translate-y-[-4px] cursor-pointer items-center justify-between rounded-[10px] border-0 px-[11px] py-2.5 text-left text-[13px] opacity-0 transition-[background-color,color,opacity,transform] duration-[180ms] hover:translate-x-0.5 hover:text-text focus-visible:translate-x-0.5 focus-visible:text-text focus-visible:outline-none data-[open=true]:translate-y-0 data-[open=true]:opacity-100',
+                'flex w-full translate-y-[-4px] cursor-pointer items-center justify-between rounded-lg border-0 px-[11px] py-2.5 text-left text-[13px] opacity-0 transition-[background-color,color,opacity,transform] duration-[180ms] hover:translate-x-0.5 focus-visible:translate-x-0.5 focus-visible:outline-none data-[open=true]:translate-y-0 data-[open=true]:opacity-100',
                 {
-                  'bg-[rgba(59,130,246,0.16)] text-text hover:bg-[rgba(59,130,246,0.24)] focus-visible:bg-[rgba(59,130,246,0.24)]': active,
-                  'bg-transparent text-[rgba(255,255,255,0.64)] hover:bg-[rgba(255,255,255,0.07)] focus-visible:bg-[rgba(255,255,255,0.07)]': !active,
-                }
+                  'bg-glow-blue/15 text-text hover:bg-glow-blue/25': active,
+                  'bg-transparent text-muted hover:bg-fg/[0.06] hover:text-text': !active,
+                },
               )}
               data-open={open}
               style={{ transitionDelay: open ? `${index * 22}ms` : '0ms' }}
@@ -87,7 +93,7 @@ export function LanguageSwitcher() {
               }}
             >
               <span>{t(item.key)}</span>
-              <span className="font-mono text-[10px] text-[rgba(255,255,255,0.35)]">{item.short}</span>
+              <span className="font-mono text-[10px] text-muted/60">{item.short}</span>
             </button>
           );
         })}

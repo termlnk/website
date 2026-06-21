@@ -9,9 +9,27 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as DocsRouteImport } from './routes/docs'
 import { Route as ChangelogRouteImport } from './routes/changelog'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as DocsIndexRouteImport } from './routes/docs/index'
+import { Route as DocsWebRouteImport } from './routes/docs/web'
+import { Route as DocsThemesRouteImport } from './routes/docs/themes'
+import { Route as DocsTerminalRouteImport } from './routes/docs/terminal'
+import { Route as DocsSshRouteImport } from './routes/docs/ssh'
+import { Route as DocsSftpRouteImport } from './routes/docs/sftp'
+import { Route as DocsQuickStartRouteImport } from './routes/docs/quick-start'
+import { Route as DocsMcpRouteImport } from './routes/docs/mcp'
+import { Route as DocsKeybindingsRouteImport } from './routes/docs/keybindings'
+import { Route as DocsFaqRouteImport } from './routes/docs/faq'
+import { Route as DocsExtensionsRouteImport } from './routes/docs/extensions'
+import { Route as DocsAiAgentRouteImport } from './routes/docs/ai-agent'
 
+const DocsRoute = DocsRouteImport.update({
+  id: '/docs',
+  path: '/docs',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ChangelogRoute = ChangelogRouteImport.update({
   id: '/changelog',
   path: '/changelog',
@@ -22,35 +40,186 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DocsIndexRoute = DocsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => DocsRoute,
+} as any)
+const DocsWebRoute = DocsWebRouteImport.update({
+  id: '/web',
+  path: '/web',
+  getParentRoute: () => DocsRoute,
+} as any)
+const DocsThemesRoute = DocsThemesRouteImport.update({
+  id: '/themes',
+  path: '/themes',
+  getParentRoute: () => DocsRoute,
+} as any)
+const DocsTerminalRoute = DocsTerminalRouteImport.update({
+  id: '/terminal',
+  path: '/terminal',
+  getParentRoute: () => DocsRoute,
+} as any)
+const DocsSshRoute = DocsSshRouteImport.update({
+  id: '/ssh',
+  path: '/ssh',
+  getParentRoute: () => DocsRoute,
+} as any)
+const DocsSftpRoute = DocsSftpRouteImport.update({
+  id: '/sftp',
+  path: '/sftp',
+  getParentRoute: () => DocsRoute,
+} as any)
+const DocsQuickStartRoute = DocsQuickStartRouteImport.update({
+  id: '/quick-start',
+  path: '/quick-start',
+  getParentRoute: () => DocsRoute,
+} as any)
+const DocsMcpRoute = DocsMcpRouteImport.update({
+  id: '/mcp',
+  path: '/mcp',
+  getParentRoute: () => DocsRoute,
+} as any)
+const DocsKeybindingsRoute = DocsKeybindingsRouteImport.update({
+  id: '/keybindings',
+  path: '/keybindings',
+  getParentRoute: () => DocsRoute,
+} as any)
+const DocsFaqRoute = DocsFaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => DocsRoute,
+} as any)
+const DocsExtensionsRoute = DocsExtensionsRouteImport.update({
+  id: '/extensions',
+  path: '/extensions',
+  getParentRoute: () => DocsRoute,
+} as any)
+const DocsAiAgentRoute = DocsAiAgentRouteImport.update({
+  id: '/ai-agent',
+  path: '/ai-agent',
+  getParentRoute: () => DocsRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/changelog': typeof ChangelogRoute
+  '/docs': typeof DocsRouteWithChildren
+  '/docs/ai-agent': typeof DocsAiAgentRoute
+  '/docs/extensions': typeof DocsExtensionsRoute
+  '/docs/faq': typeof DocsFaqRoute
+  '/docs/keybindings': typeof DocsKeybindingsRoute
+  '/docs/mcp': typeof DocsMcpRoute
+  '/docs/quick-start': typeof DocsQuickStartRoute
+  '/docs/sftp': typeof DocsSftpRoute
+  '/docs/ssh': typeof DocsSshRoute
+  '/docs/terminal': typeof DocsTerminalRoute
+  '/docs/themes': typeof DocsThemesRoute
+  '/docs/web': typeof DocsWebRoute
+  '/docs/': typeof DocsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/changelog': typeof ChangelogRoute
+  '/docs/ai-agent': typeof DocsAiAgentRoute
+  '/docs/extensions': typeof DocsExtensionsRoute
+  '/docs/faq': typeof DocsFaqRoute
+  '/docs/keybindings': typeof DocsKeybindingsRoute
+  '/docs/mcp': typeof DocsMcpRoute
+  '/docs/quick-start': typeof DocsQuickStartRoute
+  '/docs/sftp': typeof DocsSftpRoute
+  '/docs/ssh': typeof DocsSshRoute
+  '/docs/terminal': typeof DocsTerminalRoute
+  '/docs/themes': typeof DocsThemesRoute
+  '/docs/web': typeof DocsWebRoute
+  '/docs': typeof DocsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/changelog': typeof ChangelogRoute
+  '/docs': typeof DocsRouteWithChildren
+  '/docs/ai-agent': typeof DocsAiAgentRoute
+  '/docs/extensions': typeof DocsExtensionsRoute
+  '/docs/faq': typeof DocsFaqRoute
+  '/docs/keybindings': typeof DocsKeybindingsRoute
+  '/docs/mcp': typeof DocsMcpRoute
+  '/docs/quick-start': typeof DocsQuickStartRoute
+  '/docs/sftp': typeof DocsSftpRoute
+  '/docs/ssh': typeof DocsSshRoute
+  '/docs/terminal': typeof DocsTerminalRoute
+  '/docs/themes': typeof DocsThemesRoute
+  '/docs/web': typeof DocsWebRoute
+  '/docs/': typeof DocsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/changelog'
+  fullPaths:
+    | '/'
+    | '/changelog'
+    | '/docs'
+    | '/docs/ai-agent'
+    | '/docs/extensions'
+    | '/docs/faq'
+    | '/docs/keybindings'
+    | '/docs/mcp'
+    | '/docs/quick-start'
+    | '/docs/sftp'
+    | '/docs/ssh'
+    | '/docs/terminal'
+    | '/docs/themes'
+    | '/docs/web'
+    | '/docs/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/changelog'
-  id: '__root__' | '/' | '/changelog'
+  to:
+    | '/'
+    | '/changelog'
+    | '/docs/ai-agent'
+    | '/docs/extensions'
+    | '/docs/faq'
+    | '/docs/keybindings'
+    | '/docs/mcp'
+    | '/docs/quick-start'
+    | '/docs/sftp'
+    | '/docs/ssh'
+    | '/docs/terminal'
+    | '/docs/themes'
+    | '/docs/web'
+    | '/docs'
+  id:
+    | '__root__'
+    | '/'
+    | '/changelog'
+    | '/docs'
+    | '/docs/ai-agent'
+    | '/docs/extensions'
+    | '/docs/faq'
+    | '/docs/keybindings'
+    | '/docs/mcp'
+    | '/docs/quick-start'
+    | '/docs/sftp'
+    | '/docs/ssh'
+    | '/docs/terminal'
+    | '/docs/themes'
+    | '/docs/web'
+    | '/docs/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ChangelogRoute: typeof ChangelogRoute
+  DocsRoute: typeof DocsRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/docs': {
+      id: '/docs'
+      path: '/docs'
+      fullPath: '/docs'
+      preLoaderRoute: typeof DocsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/changelog': {
       id: '/changelog'
       path: '/changelog'
@@ -65,12 +234,129 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/docs/': {
+      id: '/docs/'
+      path: '/'
+      fullPath: '/docs/'
+      preLoaderRoute: typeof DocsIndexRouteImport
+      parentRoute: typeof DocsRoute
+    }
+    '/docs/web': {
+      id: '/docs/web'
+      path: '/web'
+      fullPath: '/docs/web'
+      preLoaderRoute: typeof DocsWebRouteImport
+      parentRoute: typeof DocsRoute
+    }
+    '/docs/themes': {
+      id: '/docs/themes'
+      path: '/themes'
+      fullPath: '/docs/themes'
+      preLoaderRoute: typeof DocsThemesRouteImport
+      parentRoute: typeof DocsRoute
+    }
+    '/docs/terminal': {
+      id: '/docs/terminal'
+      path: '/terminal'
+      fullPath: '/docs/terminal'
+      preLoaderRoute: typeof DocsTerminalRouteImport
+      parentRoute: typeof DocsRoute
+    }
+    '/docs/ssh': {
+      id: '/docs/ssh'
+      path: '/ssh'
+      fullPath: '/docs/ssh'
+      preLoaderRoute: typeof DocsSshRouteImport
+      parentRoute: typeof DocsRoute
+    }
+    '/docs/sftp': {
+      id: '/docs/sftp'
+      path: '/sftp'
+      fullPath: '/docs/sftp'
+      preLoaderRoute: typeof DocsSftpRouteImport
+      parentRoute: typeof DocsRoute
+    }
+    '/docs/quick-start': {
+      id: '/docs/quick-start'
+      path: '/quick-start'
+      fullPath: '/docs/quick-start'
+      preLoaderRoute: typeof DocsQuickStartRouteImport
+      parentRoute: typeof DocsRoute
+    }
+    '/docs/mcp': {
+      id: '/docs/mcp'
+      path: '/mcp'
+      fullPath: '/docs/mcp'
+      preLoaderRoute: typeof DocsMcpRouteImport
+      parentRoute: typeof DocsRoute
+    }
+    '/docs/keybindings': {
+      id: '/docs/keybindings'
+      path: '/keybindings'
+      fullPath: '/docs/keybindings'
+      preLoaderRoute: typeof DocsKeybindingsRouteImport
+      parentRoute: typeof DocsRoute
+    }
+    '/docs/faq': {
+      id: '/docs/faq'
+      path: '/faq'
+      fullPath: '/docs/faq'
+      preLoaderRoute: typeof DocsFaqRouteImport
+      parentRoute: typeof DocsRoute
+    }
+    '/docs/extensions': {
+      id: '/docs/extensions'
+      path: '/extensions'
+      fullPath: '/docs/extensions'
+      preLoaderRoute: typeof DocsExtensionsRouteImport
+      parentRoute: typeof DocsRoute
+    }
+    '/docs/ai-agent': {
+      id: '/docs/ai-agent'
+      path: '/ai-agent'
+      fullPath: '/docs/ai-agent'
+      preLoaderRoute: typeof DocsAiAgentRouteImport
+      parentRoute: typeof DocsRoute
+    }
   }
 }
+
+interface DocsRouteChildren {
+  DocsAiAgentRoute: typeof DocsAiAgentRoute
+  DocsExtensionsRoute: typeof DocsExtensionsRoute
+  DocsFaqRoute: typeof DocsFaqRoute
+  DocsKeybindingsRoute: typeof DocsKeybindingsRoute
+  DocsMcpRoute: typeof DocsMcpRoute
+  DocsQuickStartRoute: typeof DocsQuickStartRoute
+  DocsSftpRoute: typeof DocsSftpRoute
+  DocsSshRoute: typeof DocsSshRoute
+  DocsTerminalRoute: typeof DocsTerminalRoute
+  DocsThemesRoute: typeof DocsThemesRoute
+  DocsWebRoute: typeof DocsWebRoute
+  DocsIndexRoute: typeof DocsIndexRoute
+}
+
+const DocsRouteChildren: DocsRouteChildren = {
+  DocsAiAgentRoute: DocsAiAgentRoute,
+  DocsExtensionsRoute: DocsExtensionsRoute,
+  DocsFaqRoute: DocsFaqRoute,
+  DocsKeybindingsRoute: DocsKeybindingsRoute,
+  DocsMcpRoute: DocsMcpRoute,
+  DocsQuickStartRoute: DocsQuickStartRoute,
+  DocsSftpRoute: DocsSftpRoute,
+  DocsSshRoute: DocsSshRoute,
+  DocsTerminalRoute: DocsTerminalRoute,
+  DocsThemesRoute: DocsThemesRoute,
+  DocsWebRoute: DocsWebRoute,
+  DocsIndexRoute: DocsIndexRoute,
+}
+
+const DocsRouteWithChildren = DocsRoute._addFileChildren(DocsRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ChangelogRoute: ChangelogRoute,
+  DocsRoute: DocsRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

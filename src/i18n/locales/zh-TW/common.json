@@ -8,15 +8,17 @@
     "ko": "한국어"
   },
   "nav": {
+    "docs": "文檔",
     "changelog": "更新日誌",
     "github": "GitHub"
   },
   "hero": {
     "titleLine1": "Termlnk",
     "titleLine2": "為開發者打造的",
-    "subtitleLine1": "現代、可擴充的開發者智慧終端。",
-    "subtitleLine2": "SSH、SFTP、AI Agent、主題與外掛，匯聚在同一個工作區。",
+    "subtitle": "SSH、SFTP、AI Agent、主題與外掛，匯聚在同一個工作區。",
     "download": "下載",
+    "viewDocs": "閱讀文檔",
+    "worksWith": "支援",
     "cycle": {
       "developers": "智慧終端",
       "ssh": "SSH",
@@ -91,6 +93,85 @@
       "description": "內建 ProxyJump 鏈、SOCKS5 代理、X11 轉發，以及 trzsz / zmodem 檔案傳輸。"
     }
   },
+  "bento": {
+    "title": "你需要的一切",
+    "terminal": {
+      "title": "終端工作區",
+      "desc": "遞迴分屏、拖曳縮放、聚焦放大，隨心排列。"
+    },
+    "ssh": {
+      "title": "SSH & SFTP",
+      "desc": "樹形主機管理，雙欄檔案傳輸。"
+    },
+    "themes": {
+      "title": "71+ 主題",
+      "desc": "深色、淺色、自訂，即時主題編輯器。"
+    },
+    "crossPlatform": {
+      "title": "跨平台",
+      "desc": "原生支援 macOS、Windows 和 Linux。"
+    },
+    "aiAgent": {
+      "title": "AI Agent",
+      "desc": "Claude、GPT、Gemini、DeepSeek，直接在終端旁協作。"
+    },
+    "zeroConfig": {
+      "title": "零配置接入",
+      "desc": "自動寫入 hook，AI 工具即裝即用。"
+    },
+    "sessionRestore": {
+      "title": "會話恢復",
+      "desc": "重啟後快速回到之前的開發現場。"
+    },
+    "extensions": {
+      "title": "外掛系統",
+      "desc": "VS Code 風格貢獻點，內建外掛市場。"
+    },
+    "mcp": {
+      "title": "MCP 工具",
+      "desc": "連接工具伺服器，讓 Agent 在對話中呼叫。"
+    },
+    "island": {
+      "title": "靈動島",
+      "desc": "懸浮狀態列，即時展示 Agent 動態與審批操作。"
+    },
+    "portForward": {
+      "title": "連接埠轉發",
+      "desc": "一鍵轉發本地和遠端 SSH 連接埠。"
+    },
+    "snippets": {
+      "title": "程式碼片段",
+      "desc": "儲存、分類並快速貼上常用指令。"
+    },
+    "cloudSync": {
+      "title": "雲端同步",
+      "desc": "在所有裝置間同步主機、片段和設定。"
+    }
+  },
+  "getStarted": {
+    "title": "四步快速上手",
+    "step1": {
+      "title": "下載安裝",
+      "desc": "從 GitHub Releases 取得適合你系統的最新版本。"
+    },
+    "step2": {
+      "title": "開啟工作區",
+      "desc": "啟動 Termlnk，建立你的第一個工作區。"
+    },
+    "step3": {
+      "title": "連接 SSH",
+      "desc": "新增遠端主機，即刻管理伺服器。"
+    },
+    "step4": {
+      "title": "與 AI 對話",
+      "desc": "開啟 AI 面板，與任意 Agent 結對程式設計。"
+    }
+  },
+  "cta": {
+    "title": "準備好了嗎？",
+    "download": "下載 Termlnk",
+    "github": "在 GitHub 查看"
+  },
   "faq": {
     "title": "常見問題",
     "items": {
@@ -144,10 +225,36 @@
     "viewAll": "在 GitHub 查看"
   },
   "footer": {
+    "product": "產品",
+    "community": "社群",
+    "download": "下載",
+    "docs": "文檔",
     "changelog": "更新日誌",
     "contact": "聯絡",
-    "privacy": "隱私",
-    "terms": "條款",
+    "twitter": "Twitter",
+    "tagline": "為開發者打造的現代可擴充智慧終端。",
     "copyright": "© {{year}} Termlnk"
+  },
+  "docs": {
+    "title": "文檔",
+    "onThisPage": "本頁目錄",
+    "nav": {
+      "gettingStarted": "開始使用",
+      "overview": "概覽",
+      "quickStart": "快速上手",
+      "features": "核心功能",
+      "terminal": "終端工作區",
+      "ssh": "SSH 連接",
+      "sftp": "SFTP 檔案管理",
+      "aiAgent": "AI Agent",
+      "mcp": "MCP 工具",
+      "customization": "個人化",
+      "themes": "主題與外觀",
+      "extensions": "外掛系統",
+      "keybindings": "快捷鍵",
+      "more": "更多",
+      "web": "Web 版本",
+      "faq": "常見問題"
+    }
   }
 }

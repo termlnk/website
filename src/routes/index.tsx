@@ -1,9 +1,8 @@
 import { createFileRoute } from '@tanstack/react-router';
-import { GodrayCanvas } from '@/components/effects/godray-canvas';
 import { NoiseGrain } from '@/components/effects/noise-grain';
-import { DemoSection } from '@/sections/demo/demo-section';
+import { BentoSection } from '@/sections/bento/bento-section';
 import { FaqSection } from '@/sections/faq-section';
-import { FeaturesSection } from '@/sections/features-section';
+import { GettingStartedSection } from '@/sections/getting-started-section';
 import { HeroSection } from '@/sections/hero/hero-section';
 
 export const Route = createFileRoute('/')({
@@ -13,11 +12,10 @@ export const Route = createFileRoute('/')({
 function HomePage() {
   return (
     <>
-      <GodrayCanvas />
       <NoiseGrain />
       <HeroSection />
-      <DemoSection />
-      <FeaturesSection />
+      <BentoSection />
+      <GettingStartedSection />
       <FaqSection />
     </>
   );

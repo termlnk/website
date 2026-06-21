@@ -6,3 +6,4 @@ dist-node
 .idea
 .tanstack
 tsconfig.tsbuildinfo
+.env

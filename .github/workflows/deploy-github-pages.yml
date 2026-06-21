@@ -37,6 +37,8 @@ jobs:
 
       - name: Build
         run: pnpm build -- --base="/${{ github.event.repository.name }}/"
+        env:
+          VITE_DEMO_URL: https://demo.termlnk.com
 
       - name: Configure SPA fallback
         run: cp dist/index.html dist/404.html

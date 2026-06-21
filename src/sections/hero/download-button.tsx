@@ -176,7 +176,7 @@ export function DownloadButton() {
       </button>
 
       <div
-        className="pointer-events-none invisible absolute left-1/2 top-[52px] z-[200] w-[300px] origin-top translate-x-[-50%] translate-y-[-8px] scale-[0.98] overflow-hidden rounded-[14px] border border-[rgba(255,255,255,0.12)] bg-[rgba(22,20,32,0.94)] p-[5px] opacity-0 shadow-[0_22px_70px_rgba(0,0,0,0.55),inset_0_1px_rgba(255,255,255,0.08)] backdrop-blur-[20px] transition-[opacity,transform,visibility] duration-[180ms] ease-spring data-[open=true]:pointer-events-auto data-[open=true]:visible data-[open=true]:translate-y-0 data-[open=true]:scale-100 data-[open=true]:opacity-100 data-[open=true]:duration-[220ms]"
+        className="pointer-events-none invisible absolute left-1/2 top-[52px] z-[200] w-[300px] origin-top translate-x-[-50%] translate-y-[-8px] scale-[0.98] overflow-hidden rounded-xl border border-border bg-surface/95 p-[5px] opacity-0 shadow-[0_22px_70px_rgba(0,0,0,0.25)] backdrop-blur-xl transition-[opacity,transform,visibility] duration-[180ms] ease-spring data-[open=true]:pointer-events-auto data-[open=true]:visible data-[open=true]:translate-y-0 data-[open=true]:scale-100 data-[open=true]:opacity-100 data-[open=true]:duration-[220ms]"
         data-open={open}
       >
         {DOWNLOAD_TARGETS.map((target, index) => {
@@ -192,7 +192,7 @@ export function DownloadButton() {
               rel={directHref ? undefined : 'noreferrer'}
               aria-disabled={isLoading}
               className={cn(
-                'flex translate-y-[-4px] items-center gap-3 rounded-[10px] bg-transparent px-[11px] py-2.5 text-text no-underline opacity-0 transition-[background-color,color,opacity,transform] duration-[180ms] hover:translate-x-0.5 hover:bg-[rgba(255,255,255,0.07)] hover:text-text focus-visible:translate-x-0.5 focus-visible:bg-[rgba(255,255,255,0.07)] focus-visible:text-text focus-visible:outline-none data-[open=true]:translate-y-0 data-[open=true]:opacity-100',
+                'flex translate-y-[-4px] items-center gap-3 rounded-lg bg-transparent px-[11px] py-2.5 text-text no-underline opacity-0 transition-[background-color,color,opacity,transform] duration-[180ms] hover:translate-x-0.5 hover:bg-fg/[0.07] hover:text-text focus-visible:translate-x-0.5 focus-visible:bg-fg/[0.07] focus-visible:text-text focus-visible:outline-none data-[open=true]:translate-y-0 data-[open=true]:opacity-100',
                 {
                   'cursor-pointer': !isLoading,
                   'cursor-wait data-[open=true]:opacity-60': isLoading,
@@ -209,11 +209,11 @@ export function DownloadButton() {
                 setOpen(false);
               }}
             >
-              <span className="flex w-[18px] items-center justify-center text-[rgba(255,255,255,0.72)]">
+              <span className="flex w-[18px] items-center justify-center text-muted">
                 {renderIcon(target.platform)}
               </span>
               <span className="flex-1 text-left text-[13px]">{t(target.labelKey)}</span>
-              <span className="font-mono text-[10px] text-[rgba(255,255,255,0.38)]">{getMeta(target)}</span>
+              <span className="font-mono text-[10px] text-muted/60">{getMeta(target)}</span>
             </a>
           );
         })}

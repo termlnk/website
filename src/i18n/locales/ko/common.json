@@ -8,15 +8,17 @@
     "ko": "한국어"
   },
   "nav": {
+    "docs": "문서",
     "changelog": "변경 로그",
     "github": "GitHub"
   },
   "hero": {
     "titleLine1": "Termlnk",
     "titleLine2": "개발자를 위한",
-    "subtitleLine1": "현대적이고 확장 가능한 개발자용 스마트 터미널.",
-    "subtitleLine2": "SSH, SFTP, AI Agent, 테마, 플러그인을 하나의 작업 공간에 담았습니다.",
+    "subtitle": "SSH, SFTP, AI Agent, 테마, 플러그인을 하나의 작업 공간에.",
     "download": "다운로드",
+    "viewDocs": "문서 보기",
+    "worksWith": "지원",
     "cycle": {
       "developers": "스마트 터미널",
       "ssh": "SSH",
@@ -91,6 +93,85 @@
       "description": "ProxyJump 체인, SOCKS5 프록시, X11 포워딩, trzsz / zmodem 전송을 기본 제공합니다."
     }
   },
+  "bento": {
+    "title": "필요한 모든 것",
+    "terminal": {
+      "title": "터미널 워크스페이스",
+      "desc": "재귀 분할, 드래그 리사이즈, 확대 — 자유롭게 배치합니다."
+    },
+    "ssh": {
+      "title": "SSH & SFTP",
+      "desc": "트리형 호스트 관리와 듀얼 패널 파일 전송."
+    },
+    "themes": {
+      "title": "71+ 테마",
+      "desc": "다크, 라이트, 커스텀 — 라이브 테마 에디터 포함."
+    },
+    "crossPlatform": {
+      "title": "크로스플랫폼",
+      "desc": "macOS, Windows, Linux 네이티브 지원."
+    },
+    "aiAgent": {
+      "title": "AI Agent",
+      "desc": "Claude, GPT, Gemini, DeepSeek — 터미널 바로 옆에서."
+    },
+    "zeroConfig": {
+      "title": "제로 설정",
+      "desc": "hook 자동 설정으로 AI 도구를 바로 연동."
+    },
+    "sessionRestore": {
+      "title": "세션 복원",
+      "desc": "재시작 후 이전 작업 상태로 즉시 복귀."
+    },
+    "extensions": {
+      "title": "확장 기능",
+      "desc": "VS Code 스타일 플러그인 시스템과 마켓플레이스."
+    },
+    "mcp": {
+      "title": "MCP 도구",
+      "desc": "도구 서버를 연결하고 Agent가 채팅에서 호출."
+    },
+    "island": {
+      "title": "다이내믹 아일랜드",
+      "desc": "Agent 상태와 승인 작업을 실시간으로 보여주는 플로팅 바."
+    },
+    "portForward": {
+      "title": "포트 포워딩",
+      "desc": "원클릭으로 로컬 및 원격 SSH 포트를 전달."
+    },
+    "snippets": {
+      "title": "코드 스니펫",
+      "desc": "자주 쓰는 명령어를 저장·분류하고 바로 붙여넣기."
+    },
+    "cloudSync": {
+      "title": "클라우드 동기화",
+      "desc": "모든 기기에서 호스트, 스니펫, 설정을 동기화."
+    }
+  },
+  "getStarted": {
+    "title": "4단계로 시작하기",
+    "step1": {
+      "title": "다운로드 & 설치",
+      "desc": "GitHub Releases에서 OS에 맞는 최신 빌드를 받으세요."
+    },
+    "step2": {
+      "title": "워크스페이스 열기",
+      "desc": "Termlnk를 실행하고 첫 번째 워크스페이스를 만드세요."
+    },
+    "step3": {
+      "title": "SSH 연결",
+      "desc": "원격 호스트를 추가하고 바로 서버를 관리하세요."
+    },
+    "step4": {
+      "title": "AI와 대화",
+      "desc": "AI 패널을 열고 원하는 Agent와 페어 프로그래밍하세요."
+    }
+  },
+  "cta": {
+    "title": "시작할 준비가 되셨나요?",
+    "download": "다운로드",
+    "github": "GitHub에서 보기"
+  },
   "faq": {
     "title": "자주 묻는 질문",
     "items": {
@@ -144,10 +225,36 @@
     "viewAll": "GitHub 에서 보기"
   },
   "footer": {
+    "product": "제품",
+    "community": "커뮤니티",
+    "download": "다운로드",
+    "docs": "문서",
     "changelog": "변경 로그",
     "contact": "문의",
-    "privacy": "개인정보",
-    "terms": "이용약관",
+    "twitter": "Twitter",
+    "tagline": "개발자를 위한 현대적이고 확장 가능한 스마트 터미널.",
     "copyright": "© {{year}} Termlnk"
+  },
+  "docs": {
+    "title": "문서",
+    "onThisPage": "이 페이지 목차",
+    "nav": {
+      "gettingStarted": "시작하기",
+      "overview": "개요",
+      "quickStart": "빠른 시작",
+      "features": "기능",
+      "terminal": "터미널 워크스페이스",
+      "ssh": "SSH 연결",
+      "sftp": "SFTP 파일 관리",
+      "aiAgent": "AI Agent",
+      "mcp": "MCP 도구",
+      "customization": "커스터마이즈",
+      "themes": "테마 & 외관",
+      "extensions": "확장 기능",
+      "keybindings": "키 바인딩",
+      "more": "기타",
+      "web": "웹 에디션",
+      "faq": "FAQ"
+    }
   }
 }

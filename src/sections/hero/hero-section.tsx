@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { DownloadButton } from '@/sections/hero/download-button';
-import { ParticleGrid } from '@/sections/hero/particle-grid';
 import { TextCycle } from '@/sections/hero/text-cycle';
+import { ToolLogos } from '@/sections/hero/tool-logos';
 
 const CYCLE_KEYS = [
   'hero.cycle.developers',
@@ -12,10 +12,10 @@ const CYCLE_KEYS = [
   'hero.cycle.workflows',
 ] as const;
 const CYCLE_COLORS: Record<typeof CYCLE_KEYS[number], string> = {
-  'hero.cycle.developers': '#e5e5e5',
+  'hero.cycle.developers': '#ffffff',
   'hero.cycle.ssh': '#22c55e',
   'hero.cycle.sftp': '#06b6d4',
-  'hero.cycle.aiAgents': '#d97757',
+  'hero.cycle.aiAgents': '#f97316',
   'hero.cycle.plugins': '#a855f7',
   'hero.cycle.workflows': '#3b82f6',
 };
@@ -29,58 +29,69 @@ export function HeroSection() {
   }, {});
 
   return (
-    <section
-      className="relative text-center"
-      style={{ padding: '180px 24px 20px' }}
-    >
-      <ParticleGrid />
-
-      <div className="relative z-[1]">
-        <h1
-          style={{
-            fontFamily: '"JetBrains Mono", monospace',
-            fontSize: 60,
-            fontWeight: 400,
-            lineHeight: '76px',
-            letterSpacing: 0,
-            color: 'var(--color-text)',
-            margin: '0 0 14px',
-            WebkitFontSmoothing: 'none',
-            imageRendering: 'pixelated',
-          }}
-        >
-          {t('hero.titleLine1')}
-          <br />
-          {t('hero.titleLine2')}
-          {' '}
-          <TextCycle
-            items={cycleItems}
-            colors={cycleColors}
-            className="inline-block"
-          />
-        </h1>
+    <section className="relative min-h-dvh overflow-hidden">
+      {/* Background image — full bleed */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/images/hero-bg.png"
+          alt=""
+          className="h-full w-full object-cover"
+        />
+        {/* Bottom fade to site background */}
+        <div className="absolute inset-x-0 bottom-0 h-[40%] bg-gradient-to-t from-bg to-transparent" />
       </div>
 
-      <p
-        className="relative z-[1] mx-auto"
-        style={{
-          fontSize: 18,
-          lineHeight: 1.6,
-          color: 'rgba(255,255,255,0.7)',
-          maxWidth: 520,
-          margin: '0 auto 32px',
-        }}
-      >
-        {t('hero.subtitleLine1')}
-        <br />
-        {t('hero.subtitleLine2')}
-      </p>
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center px-6 pt-[140px] text-center md:pt-[160px]">
+        {/* Title */}
+        <h1 className="mb-5 max-w-4xl font-mono text-[clamp(36px,7vw,72px)] font-bold leading-[1.1] tracking-tight text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.3)]">
+          {t('hero.titleLine1')}
+          <br />
+          <span className="whitespace-nowrap">
+            {t('hero.titleLine2')}
+            {' '}
+            <TextCycle
+              items={cycleItems}
+              colors={cycleColors}
+              className="inline-block"
+            />
+          </span>
+        </h1>
 
-      <div
-        className="relative z-[160] flex gap-3 justify-center items-center"
-        style={{ marginBottom: 16 }}
-      >
-        <DownloadButton />
+        {/* Subtitle */}
+        <p className="mx-auto mb-10 max-w-xl text-base leading-relaxed text-white/80 drop-shadow-[0_1px_8px_rgba(0,0,0,0.4)] md:text-lg">
+          {t('hero.subtitle')}
+        </p>
+
+        {/* CTA buttons */}
+        <div className="relative z-[160] mb-10 flex flex-wrap items-center justify-center gap-3">
+          <DownloadButton />
+          <a
+            href="/docs"
+            className="inline-flex items-center gap-2 rounded-xl border border-white/25 bg-white/10 px-7 py-3 text-sm font-medium text-white no-underline backdrop-blur-sm transition-all duration-200 hover:border-white/40 hover:bg-white/20"
+          >
+            {t('hero.viewDocs')}
+          </a>
+        </div>
+
+        {/* Tool logos */}
+        <div className="mb-12">
+          <ToolLogos />
+        </div>
+
+        {/* Live app demo — embedded via iframe for the website showcase */}
+        <div className="mx-auto mb-5 w-full max-w-[1100px]">
+          <div className="relative overflow-hidden rounded-xl shadow-[0_-8px_60px_rgba(0,0,0,0.4)]">
+            <iframe
+              src={import.meta.env.VITE_DEMO_URL || 'https://demo.termlnk.com'}
+              className="block w-full border-0"
+              style={{ aspectRatio: '16 / 10' }}
+              title="Termlnk Demo"
+              allow="clipboard-write"
+              loading="lazy"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

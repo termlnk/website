@@ -8,15 +8,17 @@
     "ko": "한국어"
   },
   "nav": {
+    "docs": "Docs",
     "changelog": "Changelog",
     "github": "GitHub"
   },
   "hero": {
     "titleLine1": "Termlnk",
     "titleLine2": "Smart terminal for",
-    "subtitleLine1": "A modern, extensible terminal for developers.",
-    "subtitleLine2": "SSH, SFTP, AI agents, themes, and plugins in one workspace.",
+    "subtitle": "SSH, SFTP, AI agents, themes, and plugins — all in one workspace.",
     "download": "Download",
+    "viewDocs": "Read Docs",
+    "worksWith": "Works with",
     "cycle": {
       "developers": "developers",
       "ssh": "SSH",
@@ -35,92 +37,115 @@
     "unavailable": "unavailable",
     "githubReleases": "releases"
   },
-  "demo": {
+  "bento": {
+    "title": "Everything you need",
     "terminal": {
-      "title": "Split & Conquer",
-      "description": "Tile terminals any way you like — drag, split, resize, and focus."
+      "title": "Terminal Workspace",
+      "desc": "Recursive splits, drag-resize, magnify — tile panes your way."
     },
-    "sshSftp": {
-      "title": "Connect Everywhere",
-      "description": "Manage SSH hosts in a tree. Transfer files with dual-pane SFTP and chat side by side."
+    "ssh": {
+      "title": "SSH & SFTP",
+      "desc": "Tree-based host manager with dual-pane file transfer."
+    },
+    "themes": {
+      "title": "71+ Themes",
+      "desc": "Dark, light, and custom — with a live theme editor."
+    },
+    "crossPlatform": {
+      "title": "Cross-platform",
+      "desc": "Native on macOS, Windows, and Linux."
     },
     "aiAgent": {
-      "title": "AI Built In",
-      "description": "Chat with Claude, GPT, Gemini, DeepSeek — right next to your terminal."
+      "title": "AI Agent",
+      "desc": "Chat with Claude, GPT, Gemini, DeepSeek — right next to your terminal."
     },
-    "settings": {
-      "title": "Every Detail, Your Way",
-      "description": "Themes, keybindings, providers, sounds, language — tweak everything in one place."
-    }
-  },
-  "features": {
     "zeroConfig": {
       "title": "Zero Config",
-      "description": "One launch, done. Auto-configures hooks for Claude Code, Codex, Gemini CLI, Cursor, OpenCode, and more."
-    },
-    "everyAgent": {
-      "title": "Every Agent",
-      "description": "Claude Code, Codex, Gemini CLI, Cursor, OpenCode, Droid — all agents, one notch, one glance."
-    },
-    "terminals": {
-      "title": "Cross-platform",
-      "description": "macOS, Windows, Linux. Local terminal, remote SSH, and AI workflows in one native workspace."
-    },
-    "soundAlerts": {
-      "title": "Sound Alerts",
-      "description": "8-bit synthesized sounds alert you when agents need attention, even when you are away."
-    },
-    "planReview": {
-      "title": "Plan Review",
-      "description": "Review agent plans with full Markdown rendering before they execute."
-    },
-    "native": {
-      "title": "Built for Developers",
-      "description": "SSH, SFTP, AI chat, theming, and workspace splits — all designed around a real coding workflow."
-    },
-    "mcpTools": {
-      "title": "MCP Tooling",
-      "description": "Connect local or remote MCP servers, inspect available tools, and let agents call them from chat."
+      "desc": "Auto-hooks for all your AI coding tools."
     },
     "sessionRestore": {
       "title": "Session Restore",
-      "description": "Keep terminal sessions and workspace state persistent, then resume quickly after restart."
+      "desc": "Pick up right where you left off after restart."
     },
-    "sshTunnels": {
-      "title": "Advanced SSH",
-      "description": "ProxyJump chains, SOCKS5 proxy, X11 forwarding, and trzsz / zmodem transfer are built in."
+    "extensions": {
+      "title": "Extensions",
+      "desc": "VS Code-style plugin system with a marketplace."
+    },
+    "mcp": {
+      "title": "MCP Tooling",
+      "desc": "Connect tool servers and let agents call them from chat."
+    },
+    "island": {
+      "title": "Dynamic Island",
+      "desc": "A floating status bar that surfaces real-time agent activity and approvals."
+    },
+    "portForward": {
+      "title": "Port Forwarding",
+      "desc": "Forward local and remote ports over SSH with one click."
+    },
+    "snippets": {
+      "title": "Code Snippets",
+      "desc": "Save, organize, and instantly paste frequently used commands."
+    },
+    "cloudSync": {
+      "title": "Cloud Sync",
+      "desc": "Sync hosts, snippets, and settings across all your devices."
     }
+  },
+  "getStarted": {
+    "title": "Get started in minutes",
+    "step1": {
+      "title": "Download",
+      "desc": "Grab the installer for your platform."
+    },
+    "step2": {
+      "title": "Open Workspace",
+      "desc": "Launch and start your first terminal."
+    },
+    "step3": {
+      "title": "Connect SSH",
+      "desc": "Add hosts and manage remote servers."
+    },
+    "step4": {
+      "title": "Chat with AI",
+      "desc": "Pick a provider and start a conversation."
+    }
+  },
+  "cta": {
+    "title": "Ready to build smarter?",
+    "download": "Download Termlnk",
+    "github": "View on GitHub"
   },
   "faq": {
     "title": "Frequently asked questions",
     "items": {
       "platforms": {
         "question": "Which platforms are supported?",
-        "answer": "Termlnk is designed for macOS, Windows, and Linux. The website download menu points to GitHub Releases, where new builds will appear as they are published."
+        "answer": "macOS (Apple Silicon & Intel), Windows, and Linux. Downloads are on GitHub Releases."
       },
       "agents": {
-        "question": "What AI coding tools does it support?",
-        "answer": "Claude Code, Codex, Gemini CLI, Cursor, OpenCode, Droid, and more. All sessions appear in one unified notch-style panel."
+        "question": "What AI tools does it support?",
+        "answer": "Claude Code, Codex, Gemini CLI, Cursor, OpenCode, Droid, and more — all in one unified panel."
       },
       "approval": {
-        "question": "Can I approve permissions without switching away from my workflow?",
-        "answer": "Yes. When an agent requests permission, the panel expands with Allow and Deny buttons so you can respond quickly without losing context."
+        "question": "Can I approve actions without switching context?",
+        "answer": "Yes. Permission requests expand in-place with Allow / Deny buttons. No context switching needed."
       },
       "data": {
         "question": "Does my data leave my machine?",
-        "answer": "The product is built around local-first workflows. Session content, terminal state, and approval actions are intended to stay close to your machine and your own toolchain."
+        "answer": "Local-first by design. Sessions, terminal state, and approvals stay on your machine."
       },
       "setup": {
-        "question": "How does zero-config setup work?",
-        "answer": "On first launch, the necessary hook entries are written into each supported tool’s config file. A lightweight bridge handles communication between the app and your active coding tools."
+        "question": "How does zero-config work?",
+        "answer": "On first launch, hooks are written into each supported tool's config. A local bridge handles the rest."
       },
       "resources": {
-        "question": "Does it use a lot of resources?",
-        "answer": "No. The app is built to stay lightweight while idle, and to surface the information you need without constantly interrupting your focus."
+        "question": "Is it resource-heavy?",
+        "answer": "No. Lightweight when idle, surfaces what you need without constant interruption."
       },
       "opensource": {
         "question": "Is Termlnk open source?",
-        "answer": "Yes. The project is being opened up, and the website now points downloads to GitHub Releases instead of a pricing page."
+        "answer": "Yes. Source is public under PolyForm Noncommercial 1.0.0. Downloads on GitHub Releases."
       }
     }
   },
@@ -144,10 +169,36 @@
     "viewAll": "View on GitHub"
   },
   "footer": {
+    "product": "Product",
+    "community": "Community",
+    "download": "Download",
+    "docs": "Documentation",
     "changelog": "Changelog",
     "contact": "Contact",
-    "privacy": "Privacy",
-    "terms": "Terms",
+    "twitter": "Twitter",
+    "tagline": "A modern, extensible smart terminal for developers.",
     "copyright": "© {{year}} Termlnk"
+  },
+  "docs": {
+    "title": "Documentation",
+    "onThisPage": "On this page",
+    "nav": {
+      "gettingStarted": "Getting Started",
+      "overview": "Overview",
+      "quickStart": "Quick Start",
+      "features": "Features",
+      "terminal": "Terminal Workspace",
+      "ssh": "SSH Connections",
+      "sftp": "SFTP File Manager",
+      "aiAgent": "AI Agent",
+      "mcp": "MCP Tools",
+      "customization": "Customization",
+      "themes": "Themes & Appearance",
+      "extensions": "Extensions",
+      "keybindings": "Keybindings",
+      "more": "More",
+      "web": "Web Edition",
+      "faq": "FAQ"
+    }
   }
 }

@@ -6,15 +6,29 @@
 }
 
 @theme inline {
-  /* Core palette */
-  --color-bg: #151518;
-  --color-surface: #1a1a1a;
-  --color-border: rgba(255, 255, 255, 0.08);
-  --color-text: #e5e5e5;
-  --color-muted: #888888;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-bg: var(--t-bg);
+  --color-surface: var(--t-surface);
+  --color-surface-raised: var(--t-surface-raised);
+  --color-border: var(--t-border);
+  --color-text: var(--t-text);
+  --color-muted: var(--t-muted);
   --color-accent: #d97757;
+  --color-fg: var(--t-fg);
 
-  /* Status colors */
+  /* Card system */
+  --color-card: var(--t-card);
+  --color-card-border: var(--t-card-border);
+  --color-card-hover: var(--t-card-hover);
+
+  /* Glow palette */
+  --color-glow-blue: #3b82f6;
+  --color-glow-cyan: #06b6d4;
+  --color-glow-purple: #a855f7;
+  --color-glow-orange: #d97757;
+
+  /* Status */
   --color-idle: #22c55e;
   --color-idle-bright: #4ade80;
   --color-work: #3b82f6;
@@ -26,17 +40,16 @@
   --color-explore: #a855f7;
   --color-ended: #737373;
 
-  /* Semantic */
-  --color-glass-bg: rgba(255, 255, 255, 0.03);
-  --color-glass-border: rgba(255, 255, 255, 0.08);
-  --color-glass-highlight: rgba(255, 255, 255, 0.15);
+  /* Glass */
+  --color-glass-bg: var(--t-glass-bg);
+  --color-glass-border: var(--t-glass-border);
+  --color-glass-highlight: var(--t-glass-highlight);
 
   /* Fonts */
   --font-sans: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', ui-monospace, monospace;
   --font-serif: 'Instrument Serif', Georgia, serif;
 
-  /* Easing */
   --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.1);
 }
 
