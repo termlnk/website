@@ -38,7 +38,7 @@ export function HeroSection() {
           className="h-full w-full object-cover"
         />
         {/* Bottom fade to site background */}
-        <div className="absolute inset-x-0 bottom-0 h-[40%] bg-gradient-to-t from-bg to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-[10%] bg-gradient-to-t from-bg/60 to-transparent" />
       </div>
 
       {/* Content */}
@@ -80,7 +80,7 @@ export function HeroSection() {
         </div>
 
         {/* Live app demo — embedded via iframe for the website showcase */}
-        <div className="mx-auto mb-5 w-full max-w-[1100px]">
+        <div className="mx-auto mb-20 w-full max-w-[1100px]">
           <div className="relative overflow-hidden rounded-xl shadow-[0_-8px_60px_rgba(0,0,0,0.4)]">
             <iframe
               src={import.meta.env.VITE_DEMO_URL || 'https://demo.termlnk.com'}

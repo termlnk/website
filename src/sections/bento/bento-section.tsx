@@ -18,7 +18,7 @@ export function BentoSection() {
   const { t } = useTranslation();
 
   return (
-    <section className="px-6 py-28 md:py-36">
+    <section className="px-6 pb-20 pt-24 md:pb-28 md:pt-32">
       <SectionHeading eyebrow="FEATURES" title={t('bento.title')} className="mb-16" />
 
       <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">

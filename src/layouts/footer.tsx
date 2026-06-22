@@ -1,5 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { GithubIcon } from '@/components/icons/github-icon';
+import { MailIcon } from '@/components/icons/mail-icon';
+import { XIcon } from '@/components/icons/x-icon';
 
 const PRODUCT_LINKS = [
   { key: 'footer.download', href: 'https://github.com/termlnk/termlnk/releases' },
@@ -9,8 +11,8 @@ const PRODUCT_LINKS = [
 
 const COMMUNITY_LINKS = [
   { key: 'nav.github', href: 'https://github.com/termlnk/termlnk', icon: <GithubIcon size={12} /> },
-  { key: 'footer.twitter', href: 'https://x.com/telanflow', label: 'X' },
-  { key: 'footer.contact', href: 'mailto:support@termlnk.com' },
+  { key: 'footer.twitter', href: 'https://x.com/telanflow', label: 'X', icon: <XIcon size={12} /> },
+  { key: 'footer.contact', href: 'mailto:support@termlnk.com', icon: <MailIcon size={12} /> },
 ] as const;
 
 export function Footer() {
@@ -23,17 +25,17 @@ export function Footer() {
         {/* Brand */}
         <div>
           <div className="flex items-center gap-2">
-            <img src="/images/logo.png" alt="Termlnk" width={20} height={20} className="rounded-[5px] opacity-70" />
-            <span className="font-mono text-xs uppercase tracking-[0.08em] text-muted">Termlnk</span>
+            <img src="/images/logo.png" alt="Termlnk" width={20} height={20} className="rounded-[5px]" />
+            <span className="font-mono text-xs uppercase tracking-[0.08em] text-text">Termlnk</span>
           </div>
-          <p className="mt-3 text-xs leading-relaxed text-muted/70">
+          <p className="mt-3 text-xs leading-relaxed text-text/60">
             {t('footer.tagline')}
           </p>
         </div>
 
         {/* Product */}
         <div>
-          <h4 className="mb-3 font-mono text-[11px] uppercase tracking-[0.15em] text-muted/60">
+          <h4 className="mb-3 font-mono text-[11px] uppercase tracking-[0.15em] text-text/50">
             {t('footer.product')}
           </h4>
           <ul className="grid gap-2">
@@ -47,7 +49,7 @@ export function Footer() {
 
         {/* Community */}
         <div>
-          <h4 className="mb-3 font-mono text-[11px] uppercase tracking-[0.15em] text-muted/60">
+          <h4 className="mb-3 font-mono text-[11px] uppercase tracking-[0.15em] text-text/50">
             {t('footer.community')}
           </h4>
           <ul className="grid gap-2">
@@ -65,7 +67,7 @@ export function Footer() {
 
       {/* Bottom bar */}
       <div className="mx-auto flex max-w-[1200px] items-center justify-between border-t border-border px-6 py-5">
-        <span className="text-[11px] text-muted/50">{t('footer.copyright', { year })}</span>
+        <span className="text-[11px] text-text/50">{t('footer.copyright', { year })}</span>
         <FooterLink href="https://github.com/termlnk/termlnk/blob/main/LICENSE">
           PolyForm Noncommercial 1.0.0
         </FooterLink>
@@ -80,7 +82,7 @@ function FooterLink({ href, children }: { href: string; children: React.ReactNod
   return (
     <a
       href={href}
-      className="inline-flex items-center gap-1.5 text-xs no-underline text-muted/70 transition-colors duration-150 hover:text-text"
+      className="inline-flex items-center gap-1.5 text-xs no-underline text-text/70 transition-colors duration-150 hover:text-text"
       rel={isExternal ? 'noreferrer' : undefined}
       target={isExternal ? '_blank' : undefined}
     >

@@ -37,7 +37,7 @@ export function NoiseGrain() {
         position: 'fixed',
         inset: 0,
         zIndex: -2,
-        opacity: 0.15,
+        opacity: 0.06,
         pointerEvents: 'none',
       }}
     />

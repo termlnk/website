@@ -12,7 +12,7 @@ export function GettingStartedSection() {
   const { t } = useTranslation();
 
   return (
-    <section className="px-6 py-28 md:py-36">
+    <section className="px-6 py-16 md:py-20">
       <SectionHeading
         eyebrow="GET STARTED"
         title={t('getStarted.title')}

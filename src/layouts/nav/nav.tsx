@@ -1,4 +1,3 @@
-import { useEffect, useRef, useState } from 'react';
 import { useLocation } from '@tanstack/react-router';
 import { useTranslation } from 'react-i18next';
 import { GithubIcon } from '@/components/icons/github-icon';
@@ -9,39 +8,19 @@ import { cn } from '@/lib/utils';
 export function Nav() {
   const { t } = useTranslation();
   const { pathname } = useLocation();
-  const [scrolled, setScrolled] = useState(false);
-  const prevRef = useRef(false);
 
   const isHeroPage = pathname === '/';
-  const useLight = isHeroPage && !scrolled;
-
-  useEffect(() => {
-    const onScroll = () => {
-      const s = window.scrollY > 20;
-      if (s !== prevRef.current) {
-        prevRef.current = s;
-        setScrolled(s);
-      }
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+  const useLight = isHeroPage;
 
   return (
-    <nav className="pointer-events-none fixed left-0 right-0 top-0 z-[180]">
-      <div
-        className={cn(
-          'pointer-events-none absolute inset-0 transition-all duration-500',
-          !useLight ? 'bg-bg/90 backdrop-blur-xl' : 'bg-transparent',
-        )}
-      />
+    <nav className="pointer-events-none absolute left-0 right-0 top-0 z-[180]">
       <div className="pointer-events-none relative mx-auto flex max-w-[1200px] items-center justify-between px-6 pb-7 pt-[18px]">
         <div className="pointer-events-auto flex items-center gap-6">
           <a
             href="/"
             className={cn(
-              'group flex items-center gap-2 font-mono text-xs uppercase tracking-[0.08em] no-underline transition-colors duration-200',
-              useLight ? 'text-white/80 hover:text-white' : 'text-text',
+              'group flex items-center gap-2 font-mono text-xs font-semibold tracking-[0.08em] no-underline transition-colors duration-200',
+              useLight ? 'text-white/92 hover:text-white' : 'text-text',
             )}
           >
             <img
@@ -49,9 +28,9 @@ export function Nav() {
               alt="Termlnk"
               width={20}
               height={20}
-              className="rounded-[5px] opacity-80 transition-opacity duration-200 group-hover:opacity-100"
+              className="rounded-[5px] transition-opacity duration-200 group-hover:opacity-100"
             />
-            TERMLNK
+            Termlnk
           </a>
 
           <div className="hidden items-center gap-5 sm:flex">

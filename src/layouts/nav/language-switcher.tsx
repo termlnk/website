@@ -20,23 +20,29 @@ export function LanguageSwitcher({ useLight = false }: { useLight?: boolean }) {
   useEffect(() => {
     if (!open) return;
 
-    const onPointerDown = (event: PointerEvent) => {
-      if (!rootRef.current?.contains(event.target as Node)) setOpen(false);
-    };
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') setOpen(false);
     };
 
-    document.addEventListener('pointerdown', onPointerDown);
     document.addEventListener('keydown', onKeyDown);
     return () => {
-      document.removeEventListener('pointerdown', onPointerDown);
       document.removeEventListener('keydown', onKeyDown);
     };
   }, [open]);
 
+  const closeTimer = useRef<ReturnType<typeof setTimeout>>(null);
+
+  const handleEnter = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setOpen(true);
+  };
+
+  const handleLeave = () => {
+    closeTimer.current = setTimeout(() => setOpen(false), 150);
+  };
+
   return (
-    <div ref={rootRef} className="pointer-events-auto relative">
+    <div ref={rootRef} className="pointer-events-auto relative" onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
       <button
         type="button"
         aria-label={t('language.label')}
@@ -44,19 +50,21 @@ export function LanguageSwitcher({ useLight = false }: { useLight?: boolean }) {
         className={cn(
           'flex h-8 cursor-pointer items-center gap-1.5 rounded-[9px] border-0 px-2.5 font-mono text-xs transition-all duration-200',
           open
-            ? 'bg-fg/[0.08] text-text shadow-[0_12px_34px_rgba(0,0,0,0.15)]'
+            ? useLight
+              ? 'bg-white/20 text-white'
+              : 'bg-fg/[0.08] text-text shadow-[0_12px_34px_rgba(0,0,0,0.15)]'
             : useLight
               ? 'text-white/80 hover:text-white'
               : 'text-text',
         )}
-        onClick={() => setOpen((value) => !value)}
+        onClick={() => setOpen(true)}
       >
         <span>{current.short}</span>
         <span
           className={cn('text-[10px] transition-transform duration-200', {
             'rotate-180': open,
-            'text-fg/40': open || !useLight,
-            'text-white/50': !open && useLight,
+            'text-white/50': useLight,
+            'text-fg/40': !useLight,
           })}
         >
           ▼
@@ -78,7 +86,7 @@ export function LanguageSwitcher({ useLight = false }: { useLight?: boolean }) {
               key={item.code}
               type="button"
               className={cn(
-                'flex w-full translate-y-[-4px] cursor-pointer items-center justify-between rounded-lg border-0 px-[11px] py-2.5 text-left text-[13px] opacity-0 transition-[background-color,color,opacity,transform] duration-[180ms] hover:translate-x-0.5 focus-visible:translate-x-0.5 focus-visible:outline-none data-[open=true]:translate-y-0 data-[open=true]:opacity-100',
+                'flex w-full translate-y-[-4px] cursor-pointer items-center justify-between rounded-lg border-0 px-[11px] py-2.5 text-left text-[13px] opacity-0 transition-[background-color,color,opacity,transform] duration-[180ms] focus-visible:outline-none data-[open=true]:translate-y-0 data-[open=true]:opacity-100',
                 {
                   'bg-glow-blue/15 text-text hover:bg-glow-blue/25': active,
                   'bg-transparent text-muted hover:bg-fg/[0.06] hover:text-text': !active,
