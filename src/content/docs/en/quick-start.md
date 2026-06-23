@@ -37,6 +37,20 @@ Grab the latest installer from [GitHub Releases](https://github.com/termlnk/term
 
 See [SSH Connections](./ssh) for advanced options like proxy jump and port forwarding.
 
+## Create Port Forwarding
+
+1. Open the **Port Forwarding** panel in the sidebar.
+2. Click `+` and choose Local, Remote, or Dynamic forwarding.
+3. Select an SSH host and fill in bind address, port, and destination fields.
+4. Save the rule, then click the play button to start it.
+
+## Save Code Snippets
+
+1. Open the **Snippets** panel in the sidebar.
+2. Create a package or a snippet.
+3. Fill in label, script content, and execution targets.
+4. Right-click a snippet to run, edit, duplicate, or delete it.
+
 ## Open AI Chat
 
 1. Open the **AI Agent** panel.

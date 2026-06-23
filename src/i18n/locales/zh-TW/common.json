@@ -246,6 +246,8 @@
       "terminal": "終端工作區",
       "ssh": "SSH 連接",
       "sftp": "SFTP 檔案管理",
+      "portForwarding": "Port Forwarding",
+      "snippets": "Code Snippets",
       "aiAgent": "AI Agent",
       "mcp": "MCP 工具",
       "customization": "個人化",

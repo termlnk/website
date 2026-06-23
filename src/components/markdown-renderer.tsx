@@ -110,6 +110,14 @@ const components: Components = {
       {children}
     </blockquote>
   ),
+  img: ({ alt, ...rest }) => (
+    <img
+      alt={alt}
+      className="mb-6 mt-2 w-full rounded-lg border border-border bg-surface-raised"
+      loading="lazy"
+      {...rest}
+    />
+  ),
   hr: ({ ...rest }) => (
     <hr className="my-8 border-t border-border" {...rest} />
   ),

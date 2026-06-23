@@ -22,6 +22,8 @@ export const DOCS_NAV: DocNavSection[] = [
       { slug: 'terminal', titleKey: 'docs.nav.terminal' },
       { slug: 'ssh', titleKey: 'docs.nav.ssh' },
       { slug: 'sftp', titleKey: 'docs.nav.sftp' },
+      { slug: 'port-forwarding', titleKey: 'docs.nav.portForwarding' },
+      { slug: 'snippets', titleKey: 'docs.nav.snippets' },
       { slug: 'ai-agent', titleKey: 'docs.nav.aiAgent' },
       { slug: 'mcp', titleKey: 'docs.nav.mcp' },
     ],

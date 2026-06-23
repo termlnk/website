@@ -44,33 +44,19 @@ Enable X11 forwarding per host to display remote GUI applications on your local 
 
 ## Port Forwarding
 
-Termlnk supports all three SSH forwarding modes:
+Termlnk supports all three SSH forwarding modes. See [Port Forwarding](./port-forwarding) for the dedicated rule manager.
 
-### Local Forwarding (-L)
+| Type | SSH flag | Use |
+| :--- | :--- | :--- |
+| Local | `-L` | Forward a local port to a destination reachable from the SSH host |
+| Remote | `-R` | Expose a local service from the remote SSH server |
+| Dynamic | `-D` | Create a local SOCKS5 proxy through the SSH host |
 
-Forward a local port to a remote destination through the SSH tunnel.
+Forwarding rules reference SSH hosts by ID, so they reuse the host's authentication method, ProxyJump chain, SOCKS5 proxy, and host key verification.
 
-```
-Local 8080 → remote-db:3306
-```
+## Startup Snippets
 
-### Remote Forwarding (-R)
-
-Expose a local service on the remote host.
-
-```
-Remote 9090 → localhost:3000
-```
-
-### Dynamic Forwarding (-D)
-
-Create a SOCKS proxy on a local port that tunnels all traffic through the SSH connection.
-
-```
-SOCKS on localhost:1080
-```
-
-Port forwarding rules are configured per host and start automatically on connect.
+An SSH host can reference a startup snippet. When a new SSH session is created, Termlnk resolves the snippet and runs its content as the startup script. This is useful for changing directories, attaching to tmux, or initializing a remote environment. See [Code Snippets](./snippets).
 
 ## Host Key Verification
 

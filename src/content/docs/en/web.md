@@ -47,6 +47,7 @@ The web edition supports the same core features as the desktop app:
 
 - Local and SSH terminal sessions
 - SFTP file manager
+- Port forwarding and code snippets
 - AI agent with MCP tools
 - Themes and extensions
 - Session restore

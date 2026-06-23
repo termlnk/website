@@ -190,6 +190,8 @@
       "terminal": "Terminal Workspace",
       "ssh": "SSH Connections",
       "sftp": "SFTP File Manager",
+      "portForwarding": "Port Forwarding",
+      "snippets": "Code Snippets",
       "aiAgent": "AI Agent",
       "mcp": "MCP Tools",
       "customization": "Customization",

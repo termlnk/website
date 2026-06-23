@@ -17,8 +17,10 @@ import { Route as DocsWebRouteImport } from './routes/docs/web'
 import { Route as DocsThemesRouteImport } from './routes/docs/themes'
 import { Route as DocsTerminalRouteImport } from './routes/docs/terminal'
 import { Route as DocsSshRouteImport } from './routes/docs/ssh'
+import { Route as DocsSnippetsRouteImport } from './routes/docs/snippets'
 import { Route as DocsSftpRouteImport } from './routes/docs/sftp'
 import { Route as DocsQuickStartRouteImport } from './routes/docs/quick-start'
+import { Route as DocsPortForwardingRouteImport } from './routes/docs/port-forwarding'
 import { Route as DocsMcpRouteImport } from './routes/docs/mcp'
 import { Route as DocsKeybindingsRouteImport } from './routes/docs/keybindings'
 import { Route as DocsFaqRouteImport } from './routes/docs/faq'
@@ -65,6 +67,11 @@ const DocsSshRoute = DocsSshRouteImport.update({
   path: '/ssh',
   getParentRoute: () => DocsRoute,
 } as any)
+const DocsSnippetsRoute = DocsSnippetsRouteImport.update({
+  id: '/snippets',
+  path: '/snippets',
+  getParentRoute: () => DocsRoute,
+} as any)
 const DocsSftpRoute = DocsSftpRouteImport.update({
   id: '/sftp',
   path: '/sftp',
@@ -73,6 +80,11 @@ const DocsSftpRoute = DocsSftpRouteImport.update({
 const DocsQuickStartRoute = DocsQuickStartRouteImport.update({
   id: '/quick-start',
   path: '/quick-start',
+  getParentRoute: () => DocsRoute,
+} as any)
+const DocsPortForwardingRoute = DocsPortForwardingRouteImport.update({
+  id: '/port-forwarding',
+  path: '/port-forwarding',
   getParentRoute: () => DocsRoute,
 } as any)
 const DocsMcpRoute = DocsMcpRouteImport.update({
@@ -110,8 +122,10 @@ export interface FileRoutesByFullPath {
   '/docs/faq': typeof DocsFaqRoute
   '/docs/keybindings': typeof DocsKeybindingsRoute
   '/docs/mcp': typeof DocsMcpRoute
+  '/docs/port-forwarding': typeof DocsPortForwardingRoute
   '/docs/quick-start': typeof DocsQuickStartRoute
   '/docs/sftp': typeof DocsSftpRoute
+  '/docs/snippets': typeof DocsSnippetsRoute
   '/docs/ssh': typeof DocsSshRoute
   '/docs/terminal': typeof DocsTerminalRoute
   '/docs/themes': typeof DocsThemesRoute
@@ -126,8 +140,10 @@ export interface FileRoutesByTo {
   '/docs/faq': typeof DocsFaqRoute
   '/docs/keybindings': typeof DocsKeybindingsRoute
   '/docs/mcp': typeof DocsMcpRoute
+  '/docs/port-forwarding': typeof DocsPortForwardingRoute
   '/docs/quick-start': typeof DocsQuickStartRoute
   '/docs/sftp': typeof DocsSftpRoute
+  '/docs/snippets': typeof DocsSnippetsRoute
   '/docs/ssh': typeof DocsSshRoute
   '/docs/terminal': typeof DocsTerminalRoute
   '/docs/themes': typeof DocsThemesRoute
@@ -144,8 +160,10 @@ export interface FileRoutesById {
   '/docs/faq': typeof DocsFaqRoute
   '/docs/keybindings': typeof DocsKeybindingsRoute
   '/docs/mcp': typeof DocsMcpRoute
+  '/docs/port-forwarding': typeof DocsPortForwardingRoute
   '/docs/quick-start': typeof DocsQuickStartRoute
   '/docs/sftp': typeof DocsSftpRoute
+  '/docs/snippets': typeof DocsSnippetsRoute
   '/docs/ssh': typeof DocsSshRoute
   '/docs/terminal': typeof DocsTerminalRoute
   '/docs/themes': typeof DocsThemesRoute
@@ -163,8 +181,10 @@ export interface FileRouteTypes {
     | '/docs/faq'
     | '/docs/keybindings'
     | '/docs/mcp'
+    | '/docs/port-forwarding'
     | '/docs/quick-start'
     | '/docs/sftp'
+    | '/docs/snippets'
     | '/docs/ssh'
     | '/docs/terminal'
     | '/docs/themes'
@@ -179,8 +199,10 @@ export interface FileRouteTypes {
     | '/docs/faq'
     | '/docs/keybindings'
     | '/docs/mcp'
+    | '/docs/port-forwarding'
     | '/docs/quick-start'
     | '/docs/sftp'
+    | '/docs/snippets'
     | '/docs/ssh'
     | '/docs/terminal'
     | '/docs/themes'
@@ -196,8 +218,10 @@ export interface FileRouteTypes {
     | '/docs/faq'
     | '/docs/keybindings'
     | '/docs/mcp'
+    | '/docs/port-forwarding'
     | '/docs/quick-start'
     | '/docs/sftp'
+    | '/docs/snippets'
     | '/docs/ssh'
     | '/docs/terminal'
     | '/docs/themes'
@@ -269,6 +293,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DocsSshRouteImport
       parentRoute: typeof DocsRoute
     }
+    '/docs/snippets': {
+      id: '/docs/snippets'
+      path: '/snippets'
+      fullPath: '/docs/snippets'
+      preLoaderRoute: typeof DocsSnippetsRouteImport
+      parentRoute: typeof DocsRoute
+    }
     '/docs/sftp': {
       id: '/docs/sftp'
       path: '/sftp'
@@ -281,6 +312,13 @@ declare module '@tanstack/react-router' {
       path: '/quick-start'
       fullPath: '/docs/quick-start'
       preLoaderRoute: typeof DocsQuickStartRouteImport
+      parentRoute: typeof DocsRoute
+    }
+    '/docs/port-forwarding': {
+      id: '/docs/port-forwarding'
+      path: '/port-forwarding'
+      fullPath: '/docs/port-forwarding'
+      preLoaderRoute: typeof DocsPortForwardingRouteImport
       parentRoute: typeof DocsRoute
     }
     '/docs/mcp': {
@@ -327,8 +365,10 @@ interface DocsRouteChildren {
   DocsFaqRoute: typeof DocsFaqRoute
   DocsKeybindingsRoute: typeof DocsKeybindingsRoute
   DocsMcpRoute: typeof DocsMcpRoute
+  DocsPortForwardingRoute: typeof DocsPortForwardingRoute
   DocsQuickStartRoute: typeof DocsQuickStartRoute
   DocsSftpRoute: typeof DocsSftpRoute
+  DocsSnippetsRoute: typeof DocsSnippetsRoute
   DocsSshRoute: typeof DocsSshRoute
   DocsTerminalRoute: typeof DocsTerminalRoute
   DocsThemesRoute: typeof DocsThemesRoute
@@ -342,8 +382,10 @@ const DocsRouteChildren: DocsRouteChildren = {
   DocsFaqRoute: DocsFaqRoute,
   DocsKeybindingsRoute: DocsKeybindingsRoute,
   DocsMcpRoute: DocsMcpRoute,
+  DocsPortForwardingRoute: DocsPortForwardingRoute,
   DocsQuickStartRoute: DocsQuickStartRoute,
   DocsSftpRoute: DocsSftpRoute,
+  DocsSnippetsRoute: DocsSnippetsRoute,
   DocsSshRoute: DocsSshRoute,
   DocsTerminalRoute: DocsTerminalRoute,
   DocsThemesRoute: DocsThemesRoute,

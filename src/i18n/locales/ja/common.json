@@ -246,6 +246,8 @@
       "terminal": "ターミナルワークスペース",
       "ssh": "SSH 接続",
       "sftp": "SFTP ファイル管理",
+      "portForwarding": "Port Forwarding",
+      "snippets": "Code Snippets",
       "aiAgent": "AI Agent",
       "mcp": "MCP ツール",
       "customization": "カスタマイズ",

@@ -34,6 +34,10 @@ Termlnk supports the OSC 633 shell integration protocol. When enabled, the termi
 
 Shell integration activates automatically for supported shells.
 
+## Code Snippets
+
+Reusable commands can be saved as [Code Snippets](./snippets). Snippets can be sent to the current terminal session or bound to SSH hosts for targeted execution.
+
 ## Rendering
 
 The terminal renderer is built on xterm.js and supports:

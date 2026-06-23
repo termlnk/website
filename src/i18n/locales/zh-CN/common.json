@@ -190,6 +190,8 @@
       "terminal": "终端工作区",
       "ssh": "SSH 连接",
       "sftp": "SFTP 文件管理",
+      "portForwarding": "端口转发",
+      "snippets": "代码片段",
       "aiAgent": "AI Agent",
       "mcp": "MCP 工具",
       "customization": "个性化",
